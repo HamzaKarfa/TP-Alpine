@@ -1,0 +1,16 @@
+.monsterVictory{
+    animation-duration: 3s;
+    animation-name: victory;
+    animation-iteration-count: infinite;
+}
+@keyframes victory {
+    from {
+        position: absolute;
+        top: 85%;
+    }
+
+    to {
+        position: absolute;
+        top: 35%;
+    }
+  } 

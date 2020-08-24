@@ -1,0 +1,35 @@
+.attack{
+    transform: rotate(0deg); 
+
+    animation-duration: 2s;
+    animation-name: glissement;
+    animation-iteration-count: 1;
+}
+@keyframes glissement {
+    from{
+        position: relative;
+    }
+    39%{
+        box-shadow: none
+    }
+    40%{
+        position: absolute;
+        top: -100%;
+        box-shadow: 10px 10px 5px red, -10px -10px 5px red
+
+    }
+    50% {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg); 
+        transform: rotate(0deg) scale(1.5);
+    }
+
+    to {
+        -ms-transform: rotate(-3600deg);
+        -moz-transform: rotate(-3600deg);
+        -webkit-transform: rotate(-3600deg); 
+        transform: rotate(-3600deg) scale(1); 
+    
+    }
+  } 
