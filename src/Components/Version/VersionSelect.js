@@ -5,11 +5,13 @@ const stateVersionSelect = (state,propsVersionSelect) => {
     return { stateProps: propsVersionSelect };
   };
 const VersionSelectConnect=({stateProps})=> {
+
     return (
 			<div className=" d-flex f card-columns">
 				<div className="card">
 					<img
 						  className="card-img-top img-fluid"
+						  
 						  src={stateProps.Version.initialPicture}
 						  alt=""
 					/>
@@ -18,7 +20,7 @@ const VersionSelectConnect=({stateProps})=> {
 						<p className="card-text">
                             {stateProps.Version.description}
 						</p>
-						<button className="btn btn-outline-secondary">selectionner</button>
+						<button className="btn btn-outline-secondary" dataIdCar={stateProps.Version.id} onClick ={(e)=>stateProps.SelectCar(e)}>selectionner</button>
 					</div>
 				</div>
 			</div>
