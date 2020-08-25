@@ -224,10 +224,9 @@ function rootReducer(state = initialState, action) {
         case 'SELECT_VERSION' :
             newState = { 
                 ...state,
-                modelisation : action.payload.initialPicture,
+                modelisation : action.payload.allPictures,
                 order : state.order.concat(action.payload.name)
             }
-            console.log(newState.order)
             return newState
         // case 'HIT_MONSTER':
         //      newState = { 
