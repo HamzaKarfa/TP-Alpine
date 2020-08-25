@@ -7,40 +7,46 @@ import ScellerieList from './Scellerie/ScellerieList';
 import EquipementList from './Equipement/EquipementList';
 import AccessoryList from './Accessoire/AccesoireList';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-const App = ()=> {
+
+import { connect } from "react-redux";
+import CarModelisation from './CarModelisation';
+
+const state = (state) => {
+    return { CarElement: state.modelisation };
+};
+const AppConnect = ({CarElement})=> {
+    const carModelisation = () =>{
+        if (CarElement === "") {
+            return 
+        }else {
+            return <CarModelisation />
+        }
+    }
     return (
+        <>
+        <Header/>
+        {carModelisation()}
         <Router>
             <div>
                 <nav>
-                    <ul>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/Version">Version</Link>
-                        </li>
-                        <li>
-                            <Link to="/Couleur">Couleur</Link>
-                        </li>
-                        <li>
-                            <Link to="/Jantes">Jantes</Link>
-                        </li>
-                        <li>
-                            <Link to="/Scellerie">Scellerie</Link>
-                        </li>
-                        <li>
-                            <Link to="/Equipement">Equipement</Link>
-                        </li>
-                        <li>
-                            <Link to="/Accessory">Accessory</Link>
-                        </li>
-                    </ul>
-                </nav>
+
+                 <Link className="m-2 btn btn-primary" to="/ ">Version</Link>
         
-                {/* A <Switch> looks through its children <Route>s and
-                    renders the first one that matches the current URL. */}
+                 <Link className="m-2 btn btn-primary" to="/Couleur">Couleur</Link>
+                
+                 <Link className="m-2 btn btn-primary" to="/Jantes">Jantes</Link>
+               
+                 <Link className="m-2 btn btn-primary" to="/Scellerie">Scellerie</Link>
+                
+                 <Link className="m-2 btn btn-primary"  to="/Equipement">Equipement</Link>
+              
+                 <Link className="m-2 btn btn-primary" to="/Accessory">Accessory</Link>
+             
+                </nav>
+
                 <Switch>
-                    <Route path="/Version">
+
+                    <Route path="/ ">
                             <VersionList />
                     </Route>
                     <Route path="/Couleur">
@@ -64,7 +70,8 @@ const App = ()=> {
                 </Switch>
             </div>
         </Router>
-      );  
+      </>);  
 }
+const App = connect(state)(AppConnect) 
 
 export default App;

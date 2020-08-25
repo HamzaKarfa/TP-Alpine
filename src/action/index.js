@@ -1,4 +1,5 @@
 
-// export  function hitMonster(payload) {
-//     return { type: "HIT_MONSTER", payload }
-// };
+ export  function SelectVersion(payload) {
+     console.log(payload)
+     return { type :'SELECT_VERSION',payload: payload}
+ };

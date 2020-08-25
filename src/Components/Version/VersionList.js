@@ -6,35 +6,22 @@ const dispatchVersionList =() =>{
 };
 
 const stateVersionList = (state) => {
-  return { VersionsList: state.version  };
+  return { VersionsList: state.car.version  };
 };
 
 const VersionListConnect = ({VersionsList}) => {
-    let carId = null
-    const SelectCar = (e)=>{
-        carId = e.target.getAttribute('dataIdCar')
-
-	}
     const displayVersions = () => {    
         
-        console.log(carId)
-        if (carId === null) {
             return (
                 <>
                     {Object.keys(VersionsList).map(key => (
                         <div className="col versionSection text-center mb-5">
-                            <VersionSelect key={VersionsList[key].id} Version={VersionsList[key]} VersionList={VersionsList} SelectCar={ (e)=>SelectCar(e)}/>
+                            <VersionSelect key={VersionsList[key].id} Version={VersionsList[key]} VersionList={VersionsList}/>
                         </div>
                     ))}
                 </>
             )
-        } else {
-            return (
-                <div className="col versionSection text-center mb-5">
-                    <VersionSelect key={VersionsList[carId].id} Version={VersionsList[carId]} VersionList={VersionsList} />
-                </div>    
-                )
-        }
+
         
     }
 

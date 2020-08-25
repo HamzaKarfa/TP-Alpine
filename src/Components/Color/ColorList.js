@@ -6,7 +6,7 @@ const dispatchColorList =() =>{
 };
 
 const stateColorList = (state) => {
-  return { ColorList: state.color  };
+  return { ColorList: state.car.color  };
 };
 
 const ColorListConnect = ({ColorList}) => {

@@ -7,7 +7,7 @@ const dispatchEquipementList =() =>{
 };
 
 const stateEquipementList = (state) => {
-  return { EquipementList: state.equipements  };
+  return { EquipementList: state.car.equipements  };
 };
 
 const EquipementListConnect = ({EquipementList}) => {

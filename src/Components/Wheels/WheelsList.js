@@ -6,7 +6,7 @@ const dispatchWheelsList =() =>{
 };
 
 const stateWheelsList = (state) => {
-  return { WheelsList: state.wheels  };
+  return { WheelsList: state.car.wheels  };
 };
 
 const WheelsListConnect = ({WheelsList}) => {
