@@ -145,7 +145,7 @@ const initialState = {
             }, id: 4 },
     },
     equipements: {
-        design: { 
+        design: {
             1: { name: "Pack héritage", price: 180, picture:"./asset/configurateur/equipements/categories/design/pack-heritage.jpg", id: 1 },
             2: { name: "Repose-pieds passager en aluminium", price: 96, picture:"./asset/configurateur/equipements/categories/design/repose-pied-alu.jpg", id: 2 },  
         },

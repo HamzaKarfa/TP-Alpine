@@ -1,16 +1,16 @@
 import React from 'react';
 import { connect } from "react-redux";
-import EquipementSelect from './EquipementSelect';
+import AccessorySelect from './AccesoireSelect';
 import {  BrowserRouter as Router,  Switch,  Route,  Link} from "react-router-dom";
-const dispatchEquipementList =() =>{
+const dispatchAccessoryList =() =>{
 
 };
 
-const stateEquipementList = (state) => {
-  return { EquipementList: state.equipements  };
+const stateAccessoryList = (state) => {
+  return { AccessoryList: state.accessory  };
 };
 
-const EquipementListConnect = ({EquipementList}) => {
+const AccessoryListConnect = ({AccessoryList}) => {
        
 
 
@@ -20,7 +20,7 @@ const EquipementListConnect = ({EquipementList}) => {
                 <nav>
                     <h3 class="my-4 text-center" >Choisissez vos équipements </h3>
                     <ul className="nav p-5 mb-3 justify-content-center ">
-                        {Object.keys(EquipementList).map(key1 => (   
+                        {Object.keys(AccessoryList).map(key1 => (   
                             <li  className="p-2 text-center " >
                                 <Link to= {key1.toString()}>
                                     {key1}
@@ -30,10 +30,10 @@ const EquipementListConnect = ({EquipementList}) => {
                     </ul>
                 </nav>
                 <Switch>
-                    {Object.keys(EquipementList).map(key1 => (   
+                    {Object.keys(AccessoryList).map(key1 => (   
                         <Route path= {"/"+key1}>
                             <div className="row justify-content-center">
-                                <EquipementSelect key={EquipementList[key1]} Equipement={EquipementList[key1]} EquipementList={EquipementList} name={key1}/>
+                                <AccessorySelect key={AccessoryList[key1]} Accessory={AccessoryList[key1]} AccessoryList={AccessoryList} name={key1}/>
                             </div>
                         </Route>
                     ))}
@@ -48,6 +48,6 @@ const EquipementListConnect = ({EquipementList}) => {
     
   
 }
-const EquipementList = connect(stateEquipementList,dispatchEquipementList)(EquipementListConnect) 
+const AccessoryList = connect(stateAccessoryList,dispatchAccessoryList)(AccessoryListConnect) 
 
-export default EquipementList;
+export default AccessoryList;

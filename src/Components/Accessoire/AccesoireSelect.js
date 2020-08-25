@@ -1,18 +1,18 @@
 import React from 'react';
 import { connect } from "react-redux";
 
-const stateEquipementSelect = (state,propsEquipementSelect) => {
-    return { stateProps: propsEquipementSelect };
+const stateAccessorySelect = (state,propsAccessorySelect) => {
+    return { stateProps: propsAccessorySelect };
   };
-const EquipementSelectConnect=({stateProps})=> {
+const AccessorySelectConnect=({stateProps})=> {
     return (
-            Object.keys(stateProps.Equipement).map(key2 => (
+            Object.keys(stateProps.Accessory).map(key2 => (
                 <div class="card col-3 " >
                     <img  class="card-img-top "
-                        src={stateProps.Equipement[key2].picture}
+                        src={stateProps.Accessory[key2].picture}
                     />
                     <div class="card-body" >
-                        <h3>{stateProps.Equipement[key2].name}</h3>
+                        <h3>{stateProps.Accessory[key2].name}</h3>
                         <p class="card-text" >
                             ajoutez  le logo de l'Alpine à votre volant
                         </p >
@@ -23,6 +23,6 @@ const EquipementSelectConnect=({stateProps})=> {
             )))
         }
 
-const EquipementSelect = connect(stateEquipementSelect)(EquipementSelectConnect) 
+const AccessorySelect = connect(stateAccessorySelect)(AccessorySelectConnect) 
 
-export default EquipementSelect;
+export default AccessorySelect;
