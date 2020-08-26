@@ -3,21 +3,20 @@ import { connect } from "react-redux";
 
 const stateCarColorModelisation = (state) => {
 
-    return { state: state.modelisation  };
+    return { state: state.modelisation.car  };
 
   
 };
 const CarColorModelisationConnect=({state}) => {
-    console.log(state)
 
     function DisplayCaroussel(){
-        if (state.standard === undefined) {
-            return (Object.keys(state).map(key => (
-                DisplayItemCaroussel(key,state)
+        if (state.allPictures.standard === undefined) {
+            return (Object.keys(state.allPictures).map(key => (
+                DisplayItemCaroussel(key,state.allPictures)
             )))
         }else{
-           return ( Object.keys(state.standard).map(key => (
-                DisplayItemCaroussel(key,state.standard)
+           return ( Object.keys(state.allPictures.standard).map(key => (
+                DisplayItemCaroussel(key,state.allPictures.standard)
             )))
         }
         

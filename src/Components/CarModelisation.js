@@ -4,7 +4,7 @@ import "./CarModelisation.css";
 
 const stateCarModelisation = (state) => {
 
-    return { state: state.modelisation  };
+    return { state: state.modelisation.car  };
 
   
 };
@@ -12,13 +12,13 @@ const CarModelisationConnect=({state}) => {
     console.log(state)
 
     function DisplayCaroussel(){
-        if (state.blanc.standard === undefined) {
-            return (Object.keys(state.blanc).map(key => (
-                DisplayItemCaroussel(key,state.blanc)
+        if (state.allPictures.blanc.standard === undefined) {
+            return (Object.keys(state.allPictures.blanc).map(key => (
+                DisplayItemCaroussel(key,state.allPictures.blanc)
             )))
         }else{
-           return ( Object.keys(state.blanc.standard).map(key => (
-                DisplayItemCaroussel(key,state.blanc.standard)
+           return ( Object.keys(state.allPictures.blanc.standard).map(key => (
+                DisplayItemCaroussel(key,state.allPictures.blanc.standard)
             )))
         }
         

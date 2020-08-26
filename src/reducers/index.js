@@ -224,14 +224,20 @@ function rootReducer(state = initialState, action) {
         case 'SELECT_VERSION' :
             newState = { 
                 ...state,
-                modelisation : action.payload.allPictures,
+                modelisation : { car : action.payload}
             }
             console.log(newState)
             return newState
         case 'SELECT_COLOR' :
             newState = { 
                 ...state,
-                modelisation: state.modelisation[action.payload.color]
+                modelisation:{ 
+                   ...state.modelisation,
+                    car : {
+                        ...state.modelisation.car,
+                        allPictures : state.modelisation.car.allPictures[action.payload.color]
+                    }
+                }
             }
             console.log(newState)
             return newState

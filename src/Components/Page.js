@@ -21,7 +21,7 @@ const AppConnect = ({CarElement})=> {
         if (CarElement === "") {
             return 
         }else {
-            if (CarElement.blanc === undefined) {
+            if (CarElement.car.allPictures.blanc === undefined) {
                 return <CarColorModelisation />
             } else {
                 return <CarModelisation />
