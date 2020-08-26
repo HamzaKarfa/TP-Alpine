@@ -1,0 +1,11 @@
+.cardResponsive{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px){
+    .cardResponsive{
+        flex-direction: column;
+    }
+}

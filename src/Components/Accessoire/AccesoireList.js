@@ -20,7 +20,7 @@ const AccessoryListConnect = ({AccessoryList}) => {
                         <ul className="nav p-5 mb-3 justify-content-center ">
                             {Object.keys(AccessoryList).map(key1 => (   
                                 <li  className="p-2 text-center " >
-                                    <Link to= {key1.toString()}>
+                                    <Link className="btn btn-primary" to= {key1.toString()}>
                                         {key1}
                                     </Link>
                                 </li>
@@ -30,9 +30,12 @@ const AccessoryListConnect = ({AccessoryList}) => {
                     <Switch>
                         {Object.keys(AccessoryList).map(key1 => (   
                             <Route path= {"/"+key1}>
-                                <div className="row justify-content-center">
+                               <div className="container">
+                                  <div className="cardResponsive">
                                     <AccessorySelect key={AccessoryList[key1]} Accessory={AccessoryList[key1]} AccessoryList={AccessoryList} name={key1}/>
                                 </div>
+                               </div>
+                               
                             </Route>
                         ))}
                     </Switch>

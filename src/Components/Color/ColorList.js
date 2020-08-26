@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 import ColorSelect from './ColorSelect';
+import "../responsive.css";
 const dispatchColorList =() =>{
 
 };
@@ -25,8 +26,10 @@ const ColorListConnect = ({ColorList}) => {
         }
 
     return (
-        <div className='row justify-content-center'>
+        <div className="container">
+        <div className='cardResponsive'>
             {displayColorList()}
+        </div>
         </div>
     );
   

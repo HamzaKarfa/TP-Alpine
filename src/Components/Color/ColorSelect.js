@@ -6,7 +6,7 @@ const stateColorSelect = (state,propsColorSelect) => {
   };
 const ColorSelectConnect=({stateProps})=> {
     return (
-			<div className=" d-flex f card-columns">
+			<div className=" d-flex card-columns">
 				<div className="card">
 					<img
 						  className="card-img-top img-fluid"
@@ -18,7 +18,7 @@ const ColorSelectConnect=({stateProps})=> {
 						<p className="card-text">
                             {stateProps.Color.name}
 						</p>
-						<button className="btn btn-outline-secondary">selectionner</button>
+						<button className="btn btn-outline-primary">selectionner</button>
 					</div>
 				</div>
 			</div>
