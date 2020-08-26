@@ -8,13 +8,31 @@ const stateCarWheelsModelisation = (state) => {
   
 };
 const CarWheelsModelisationConnect=({state}) => {
-    console.log(state)
+
 
     function DisplayCaroussel(){
-
-           return ( Object.keys(state).map(key => (
-                DisplayItemCaroussel(key,state)
-            )))        
+        if (state.car.version.name === "Legende") {
+            if (state.allPictures === undefined) {
+                return (Object.keys(state.allPictures).map(key => (
+                    DisplayItemCaroussel(key,state.allPictures)
+                )))
+            }else{
+                return (Object.keys(state.allPictures.legende).map(key => (
+                    DisplayItemCaroussel(key,state.allPictures.legende)
+                )))
+            }
+        }else{
+            if (state.allPictures.standard === undefined) {
+                return ( Object.keys(state.allPictures).map(key => (
+                        DisplayItemCaroussel(key,state.allPictures)
+                )))
+            }else{
+                return ( Object.keys(state.allPictures.standard).map(key => (
+                    DisplayItemCaroussel(key,state.allPictures.standard)
+            )))
+            }
+        }
+    
     }
     function DisplayItemCaroussel(key,imgSrc){
         if (key === "1") {

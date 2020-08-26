@@ -1,3 +1,5 @@
+import { version } from "react";
+
 const initialState = {
     car:{
         version: {
@@ -58,22 +60,28 @@ const initialState = {
                 initialPicture:"./asset/configurateur/modele/selection/legende.png", 
                 allPictures:{ 
                     blanc:{
-                        1:"./asset/configurateur/modele/legende/modele_legende-couleur_blanc-jante_legende-1.jpg",
-                        2:"./asset/configurateur/modele/legende/modele_legende-couleur_blanc-jante_legende-2.jpg",
-                        3:"./asset/configurateur/modele/legende/modele_legende-couleur_blanc-jante_legende-3.jpg",
-                        4:"./asset/configurateur/modele/legende/modele_legende-couleur_blanc-jante_legende-4.jpg"
+                        legende:{
+                            1:"./asset/configurateur/modele/legende/modele_legende-couleur_blanc-jante_legende-1.jpg",
+                            2:"./asset/configurateur/modele/legende/modele_legende-couleur_blanc-jante_legende-2.jpg",
+                            3:"./asset/configurateur/modele/legende/modele_legende-couleur_blanc-jante_legende-3.jpg",
+                            4:"./asset/configurateur/modele/legende/modele_legende-couleur_blanc-jante_legende-4.jpg"
+                        }
                     },
                     bleu:{
-                        1:"./asset/configurateur/modele/legende/modele_legende-couleur_bleu-jante_legende-1.jpg",
-                        2:"./asset/configurateur/modele/legende/modele_legende-couleur_bleu-jante_legende-2.jpg",
-                        3:"./asset/configurateur/modele/legende/modele_legende-couleur_bleu-jante_legende-3.jpg",
-                        4:"./asset/configurateur/modele/legende/modele_legende-couleur_bleu-jante_legende-4.jpg"
+                        legende:{
+                            1:"./asset/configurateur/modele/legende/modele_legende-couleur_bleu-jante_legende-1.jpg",
+                            2:"./asset/configurateur/modele/legende/modele_legende-couleur_bleu-jante_legende-2.jpg",
+                            3:"./asset/configurateur/modele/legende/modele_legende-couleur_bleu-jante_legende-3.jpg",
+                            4:"./asset/configurateur/modele/legende/modele_legende-couleur_bleu-jante_legende-4.jpg"
+                        }
                     },
                     noir:{
-                        1:"./asset/configurateur/modele/legende/modele_legende-couleur_noir-jante_legende-1.jpg",
-                        2:"./asset/configurateur/modele/legende/modele_legende-couleur_noir-jante_legende-2.jpg",
-                        3:"./asset/configurateur/modele/legende/modele_legende-couleur_noir-jante_legende-3.jpg",
-                        4:"./asset/configurateur/modele/legende/modele_legende-couleur_noir-jante_legende-4.jpg"
+                        legende:{
+                            1:"./asset/configurateur/modele/legende/modele_legende-couleur_noir-jante_legende-1.jpg",
+                            2:"./asset/configurateur/modele/legende/modele_legende-couleur_noir-jante_legende-2.jpg",
+                            3:"./asset/configurateur/modele/legende/modele_legende-couleur_noir-jante_legende-3.jpg",
+                            4:"./asset/configurateur/modele/legende/modele_legende-couleur_noir-jante_legende-4.jpg"
+                        }
                     }
                 }, 
                 description: "Pourquoi changer quand la legende nous rappelle tous les souvenirs de notre enfance?",
@@ -91,9 +99,9 @@ const initialState = {
                 name: "Standard",
                 price: 0, 
                 picture:{
-                    1:"./asset/configurateur/jantes/vues/couleur-blanc_jante-standard (2).jpg",
-                    2:"./asset/configurateur/jantes/vues/couleur-bleu_jante-standard (3).jpg",
-                    3:"./asset/configurateur/jantes/vues/couleur-noir_jante-standard (1).jpg"
+                    blanc:"./asset/configurateur/jantes/vues/couleur-blanc_jante-standard (2).jpg",
+                    bleu:"./asset/configurateur/jantes/vues/couleur-bleu_jante-standard (3).jpg",
+                    noir:"./asset/configurateur/jantes/vues/couleur-noir_jante-standard (1).jpg"
                 }, 
                 id: 1 
             },
@@ -101,9 +109,9 @@ const initialState = {
                 name: "Serac", 
                 price: 1000, 
                 picture:{
-                    1:"./asset/configurateur/jantes/vues/couleur-blanc_jante-serac (2).jpg",
-                    2:"./asset/configurateur/jantes/vues/couleur-bleu_jante-serac (3).jpg",
-                    3:"./asset/configurateur/jantes/vues/couleur-noir_jante-serac (1).jpg"
+                    blanc:"./asset/configurateur/jantes/vues/couleur-blanc_jante-serac (2).jpg",
+                    bleu:"./asset/configurateur/jantes/vues/couleur-bleu_jante-serac (3).jpg",
+                    noir:"./asset/configurateur/jantes/vues/couleur-noir_jante-serac (1).jpg"
                 }, 
                 id: 2 
             },
@@ -112,9 +120,9 @@ const initialState = {
                 price: 0, 
                 version:"legende", 
                 picture:{
-                    1:"./asset/configurateur/jantes/vues/couleur-blanc_jante-legende (2).jpg",
-                    2:"./asset/configurateur/jantes/vues/couleur-bleu_jante-legende (3).jpg",
-                    3:"./asset/configurateur/jantes/vues/couleur-noir_jante-legende (1).jpg"
+                    blanc:"./asset/configurateur/jantes/vues/couleur-blanc_jante-legende (2).jpg",
+                    bleu:"./asset/configurateur/jantes/vues/couleur-bleu_jante-legende (3).jpg",
+                    noir:"./asset/configurateur/jantes/vues/couleur-noir_jante-legende (1).jpg"
                 }, 
                 id: 3
             }
@@ -221,10 +229,11 @@ function rootReducer(state = initialState, action) {
     let newState = null
 
     switch (action.type) {
+        
         case 'SELECT_VERSION' :
             newState = { 
                 ...state,
-                modelisation : { car : action.payload}
+                modelisation : { car :{version: action.payload} } 
             }
             console.log(newState)
             return newState
@@ -235,7 +244,30 @@ function rootReducer(state = initialState, action) {
                    ...state.modelisation,
                     car : {
                         ...state.modelisation.car,
-                        allPictures : state.modelisation.car.allPictures[action.payload.color]
+                        version:{
+                            ...state.modelisation.car.version,
+                            allPictures : state.modelisation.car.version.allPictures[action.payload.color]
+                        },
+                    color: action.payload
+                    }
+                }
+            }
+            console.log(newState)
+            return newState
+        case 'SELECT_WHEEL' :
+            console.log("COLOR",action.payload.Wheels.name)
+            newState = { 
+                ...state,
+                modelisation:{ 
+                    ...state.modelisation,
+                    car : {
+                        ...state.modelisation.car,
+                        version:{
+                            ...state.modelisation.car.version,
+                            allPictures : state.modelisation.car.version.allPictures[action.payload.Wheels.name.toLowerCase()]
+                        },
+                    color: { ...state.modelisation.car.color},
+                    wheels : action.payload.Wheels
                     }
                 }
             }

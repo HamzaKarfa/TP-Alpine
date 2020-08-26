@@ -14,7 +14,6 @@ const stateWheelsList = (state) => {
 const WheelsListConnect = ({WheelsList,state}) => {
 
     function conditionWheelsLegend(type,key) {
-        console.log(type)
         if (type.name === "Legende") {
             return (  
             <div className="col WheelsList text-center mb-5">
@@ -23,10 +22,8 @@ const WheelsListConnect = ({WheelsList,state}) => {
         }else{
             return
         }
-        
     }
     function conditionWheelsPure(type,key) {
-        console.log(type)
         if (type.name === "Standard" || type.name === "Serac" ) {
             return (  
             <div className="col WheelsList text-center mb-5">
@@ -35,16 +32,16 @@ const WheelsListConnect = ({WheelsList,state}) => {
         }else{
             return
         }
-        
     }
     const displayWheels = () => {
-        if (state.modelisation !== "" && state.modelisation.car.name === "Legende") {
+        if (state.modelisation !== "" && state.modelisation.car.version.name === "Legende") {
+
             return (
                 Object.keys(WheelsList).map(key => (
                     conditionWheelsLegend(WheelsList[key],key)
                 ))
             )
-        } else if (state.modelisation !== "" && state.modelisation.car.name === "Pure"){
+        } else if (state.modelisation !== "" && state.modelisation.car.version.name === "Pure"){
             return (
                 Object.keys(WheelsList).map(key => (
                     conditionWheelsPure(WheelsList[key],key)

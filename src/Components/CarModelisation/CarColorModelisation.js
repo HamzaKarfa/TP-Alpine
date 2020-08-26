@@ -3,21 +3,34 @@ import { connect } from "react-redux";
 
 const stateCarColorModelisation = (state) => {
 
-    return { state: state.modelisation.car  };
+    return { state: state.modelisation.car.version  };
 
   
 };
 const CarColorModelisationConnect=({state}) => {
 
     function DisplayCaroussel(){
-        if (state.allPictures.standard === undefined) {
-            return (Object.keys(state.allPictures).map(key => (
-                DisplayItemCaroussel(key,state.allPictures)
-            )))
+        console.log(state)
+        if (state.name === "Legende") {
+            if (state.allPictures.legende === undefined) {
+                return (Object.keys(state.allPictures).map(key => (
+                    DisplayItemCaroussel(key,state.allPictures)
+                )))
+            }else{
+                return ( Object.keys(state.allPictures.legende).map(key => (
+                    DisplayItemCaroussel(key,state.allPictures.legende)
+                )))
+            }
         }else{
-           return ( Object.keys(state.allPictures.standard).map(key => (
-                DisplayItemCaroussel(key,state.allPictures.standard)
-            )))
+            if (state.allPictures.standard === undefined) {
+                return ( Object.keys(state.allPictures).map(key => (
+                    DisplayItemCaroussel(key,state.allPictures)
+                )))
+            }else{
+                return ( Object.keys(state.allPictures.standard).map(key => (
+                    DisplayItemCaroussel(key,state.allPictures.standard)
+                )))
+            }
         }
         
     }

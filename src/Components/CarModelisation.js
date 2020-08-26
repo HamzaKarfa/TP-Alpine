@@ -4,7 +4,7 @@ import "./CarModelisation.css";
 
 const stateCarModelisation = (state) => {
 
-    return { state: state.modelisation.car  };
+    return { state: state.modelisation.car.version  };
 
   
 };
@@ -13,8 +13,8 @@ const CarModelisationConnect=({state}) => {
 
     function DisplayCaroussel(){
         if (state.allPictures.blanc.standard === undefined) {
-            return (Object.keys(state.allPictures.blanc).map(key => (
-                DisplayItemCaroussel(key,state.allPictures.blanc)
+            return (Object.keys(state.allPictures.blanc.legende).map(key => (
+                DisplayItemCaroussel(key,state.allPictures.blanc.legende)
             )))
         }else{
            return ( Object.keys(state.allPictures.blanc.standard).map(key => (

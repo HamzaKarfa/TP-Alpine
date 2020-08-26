@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { connect } from "react-redux";
 import CarModelisation from './CarModelisation';
 import CarColorModelisation from './CarModelisation/CarColorModelisation';
+import CarWheelsModelisation from './CarModelisation/CarWheelsModelisation';
 import './Page.css'
 
 
@@ -20,11 +21,25 @@ const AppConnect = ({CarElement})=> {
     const carModelisation = () =>{
         if (CarElement === "") {
             return 
-        }else {
-            if (CarElement.car.allPictures.blanc === undefined) {
-                return <CarColorModelisation />
-            } else {
-                return <CarModelisation />
+        }else{
+            console.log(CarElement)
+            if (CarElement.car.version.name === "Legende") {
+                if (CarElement.car.version.allPictures.blanc === undefined) {
+                    return <CarColorModelisation />
+                }else if (CarElement.car.version.allPictures.blanc.legende === undefined){
+                    return <CarWheelsModelisation />
+                }else {
+                    return <CarModelisation/>
+                }
+            }else if(CarElement.car.version.name === "Pure"){
+
+                if (CarElement.car.version.allPictures.blanc === undefined) {
+                    return <CarColorModelisation />
+                }else if (CarElement.car.version.allPictures.blanc.serac === undefined){
+                    return <CarWheelsModelisation />
+                }else {
+                    return <CarModelisation/>
+                }
             }
         }
     }
