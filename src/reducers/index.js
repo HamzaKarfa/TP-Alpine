@@ -82,9 +82,9 @@ const initialState = {
         },
 
         color:{
-            1: { name: "Teinte spéciale Bleu Alpine", price: 1800, picture:"./asset/configurateur/couleurs/selection/bleu.jpg", id: 1 },
-            2: { name: "Teinte métallisée Noir Profond", price: 840, picture:"./asset/configurateur/couleurs/selection/noir.jpg", id: 2 },
-            3: { name: "Peinture opaque Blanc Glacier", price: 0, picture:"./asset/configurateur/couleurs/selection/blanc.jpg", id: 3 },
+            1: { color:"bleu", name: "Teinte spéciale Bleu Alpine", price: 1800, picture:"./asset/configurateur/couleurs/selection/bleu.jpg", id: 1 },
+            2: { color:"noir", name: "Teinte métallisée Noir Profond", price: 840, picture:"./asset/configurateur/couleurs/selection/noir.jpg", id: 2 },
+            3: { color:"blanc", name: "Peinture opaque Blanc Glacier", price: 0, picture:"./asset/configurateur/couleurs/selection/blanc.jpg", id: 3 },
         },
         wheels: {
             1: { 
@@ -225,8 +225,15 @@ function rootReducer(state = initialState, action) {
             newState = { 
                 ...state,
                 modelisation : action.payload.allPictures,
-                order : state.order.concat(action.payload.name)
             }
+            console.log(newState)
+            return newState
+        case 'SELECT_COLOR' :
+            newState = { 
+                ...state,
+                modelisation: state.modelisation[action.payload.color]
+            }
+            console.log(newState)
             return newState
         // case 'HIT_MONSTER':
         //      newState = { 

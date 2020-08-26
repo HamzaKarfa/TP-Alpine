@@ -7,9 +7,11 @@ import ScellerieList from './Scellerie/ScellerieList';
 import EquipementList from './Equipement/EquipementList';
 import AccessoryList from './Accessoire/AccesoireList';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
 import { connect } from "react-redux";
 import CarModelisation from './CarModelisation';
+import CarColorModelisation from './CarModelisation/CarColorModelisation';
+import './Page.css'
+
 
 const state = (state) => {
     return { CarElement: state.modelisation };
@@ -19,7 +21,11 @@ const AppConnect = ({CarElement})=> {
         if (CarElement === "") {
             return 
         }else {
-            return <CarModelisation />
+            if (CarElement.blanc === undefined) {
+                return <CarColorModelisation />
+            } else {
+                return <CarModelisation />
+            }
         }
     }
     return (
@@ -27,8 +33,8 @@ const AppConnect = ({CarElement})=> {
         
         <Router>
             <div>
-                  <nav className="navbar navbar-expand-lg navbar-dark bg-primary mb-5" >
-                     <Link className="m-2 navbar-brand " to="/">ALPINE A110</Link>
+                  <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-primary mb-5" >
+                     <Link className="m-2 navbar-brand" to="/ ">ALPINE A110</Link>
                       <button
                         className="navbar-toggler"
                         type="button"
@@ -44,7 +50,7 @@ const AppConnect = ({CarElement})=> {
                         id="navbarNav" >
                             <ul className="navbar-nav ml-auto" >
                               <li className="nav-item active  " >
-                                   <Link className="m-2  nav-link" to="/ ">Version</Link>
+                                   <Link className="m-2  nav-link" to="/Version">Version</Link>
                               </li >
                               <li className="nav-item" >
                                   <Link className="m-2 nav-link" to="/Couleur">Couleur</Link>
@@ -64,10 +70,14 @@ const AppConnect = ({CarElement})=> {
                             </ul >
                     </div >
                 </nav >
+                <br />
                  <Header/>
                {carModelisation()}
                 <Switch>
                     <Route path="/ ">
+
+                    </Route>
+                    <Route path="/Version">
                             <VersionList />
                     </Route>
                     <Route path="/Couleur">

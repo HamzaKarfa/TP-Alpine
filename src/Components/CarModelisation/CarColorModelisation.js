@@ -1,24 +1,23 @@
 import React from 'react';
 import { connect } from "react-redux";
-import "./CarModelisation.css";
 
-const stateCarModelisation = (state) => {
+const stateCarColorModelisation = (state) => {
 
     return { state: state.modelisation  };
 
   
 };
-const CarModelisationConnect=({state}) => {
+const CarColorModelisationConnect=({state}) => {
     console.log(state)
 
     function DisplayCaroussel(){
-        if (state.blanc.standard === undefined) {
-            return (Object.keys(state.blanc).map(key => (
-                DisplayItemCaroussel(key,state.blanc)
+        if (state.standard === undefined) {
+            return (Object.keys(state).map(key => (
+                DisplayItemCaroussel(key,state)
             )))
         }else{
-           return ( Object.keys(state.blanc.standard).map(key => (
-                DisplayItemCaroussel(key,state.blanc.standard)
+           return ( Object.keys(state.standard).map(key => (
+                DisplayItemCaroussel(key,state.standard)
             )))
         }
         
@@ -58,6 +57,6 @@ const CarModelisationConnect=({state}) => {
 }
   
 
-const CarModelisation = connect(stateCarModelisation)(CarModelisationConnect) 
+const CarColorModelisation = connect(stateCarColorModelisation)(CarColorModelisationConnect) 
 
-export default CarModelisation;
+export default CarColorModelisation;
