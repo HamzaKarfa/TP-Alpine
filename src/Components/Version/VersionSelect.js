@@ -44,7 +44,7 @@ const VersionSelectConnect=({stateProps,SelectVersions})=> {
 						<p className="card-text">
                             {stateProps.Version.description}
 						</p>
-						<button className="btn btn-outline-secondary" onClick={SelectVersions}>selectionner</button>
+						<button className="btn btn-outline-primary" onClick={SelectVersions}>selectionner</button>
 					</div>
 				</div>
 			</div>

@@ -24,29 +24,51 @@ const AppConnect = ({CarElement})=> {
     }
     return (
         <>
-        <Header/>
+       
         {carModelisation()}
         <Router>
             <div>
-                <nav>
-
-                 <Link className="m-2 btn btn-primary" to="/ ">Version</Link>
-        
-                 <Link className="m-2 btn btn-primary" to="/Couleur">Couleur</Link>
-                
-                 <Link className="m-2 btn btn-primary" to="/Jantes">Jantes</Link>
-               
-                 <Link className="m-2 btn btn-primary" to="/Scellerie">Scellerie</Link>
-                
-                 <Link className="m-2 btn btn-primary"  to="/Equipement">Equipement</Link>
-              
-                 <Link className="m-2 btn btn-primary" to="/Accessory">Accessory</Link>
-             
-                </nav>
-
+                  <nav className="navbar navbar-expand-lg navbar-dark bg-primary mb-5" >
+                     <Link className="m-2 navbar-brand " to="/">ALPINE A110</Link>
+                      <button
+                        className="navbar-toggler"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation" >
+                      <span className="navbar-toggler-icon" ></span >
+                      </button >
+                      <div
+                        className="collapse navbar-collapse  "
+                        id="navbarNav" >
+                            <ul className="navbar-nav ml-auto" >
+                              <li className="nav-item active  " >
+                                   <Link className="m-2  nav-link" to="/ ">Version</Link>
+                              </li >
+                              <li className="nav-item" >
+                                  <Link className="m-2 nav-link" to="/Couleur">Couleur</Link>
+                              </li >
+                              <li className="nav-item" >
+                                  <Link className="m-2 nav-link" to="/Jantes">Jantes</Link>
+                              </li >
+                                <li className="nav-item" >
+                                   <Link className="m-2 nav-link" to="/Scellerie">Scellerie</Link>
+                              </li >
+                                <li className="nav-item" >
+                                   <Link className="m-2 nav-link"  to="/Equipement">Equipement</Link>
+                              </li >
+                                <li className="nav-item" >
+                                    <Link className="m-2 nav-link" to="/Accessory">Accessory</Link>
+                              </li >
+                            </ul >
+                    </div >
+                </nav >
+                <Header/>
                 <Switch>
 
-                    <Route path="/ ">
+                    <Route path="/">
                             <VersionList />
                     </Route>
                     <Route path="/Couleur">

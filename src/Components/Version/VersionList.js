@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 import VersionSelect from './VersionSelect';
+import "../responsive.css";
 const dispatchVersionList =() =>{
 
 };
@@ -26,9 +27,12 @@ const VersionListConnect = ({VersionsList}) => {
     }
 
     return (
-        <div className='row justify-content-center'>
+        <div className="container">
+            <div className='cardResponsive'>
             {displayVersions()}
         </div>
+        </div>
+       
     );
   
 }

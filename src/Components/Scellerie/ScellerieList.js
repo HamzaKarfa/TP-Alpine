@@ -25,8 +25,11 @@ const ScellerieListConnect = ({ScellerieList}) => {
         }
 
     return (
-        <div className='row justify-content-center'>
+        <div className="container">
+        <div className='cardResponsive'>
             {displayScellerie()}
+        </div>
+        
         </div>
     );
   

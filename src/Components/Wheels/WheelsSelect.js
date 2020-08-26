@@ -6,7 +6,7 @@ const stateWheelsSelect = (state,propsWheelsSelect) => {
   };
 const WheelsSelectConnect=({stateProps})=> {
     return (
-			<div className=" d-flex f card-columns">
+			<div className=" d-flex  card-columns">
 				<div className="card">
 					<img
 						  className="card-img-top img-fluid"
@@ -18,7 +18,7 @@ const WheelsSelectConnect=({stateProps})=> {
 						<p className="card-text">
                             {stateProps.Wheels.description}
 						</p>
-						<button className="btn btn-outline-secondary">selectionner</button>
+						<button className="btn btn-outline-primary">selectionner</button>
 					</div>
 				</div>
 			</div>

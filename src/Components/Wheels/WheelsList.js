@@ -24,8 +24,10 @@ const WheelsListConnect = ({WheelsList}) => {
         }
 
     return (
-        <div className='row justify-content-center'>
-            {displayWheels()}
+        <div className="container">
+            <div className='cardResponsive'>
+                {displayWheels()}
+            </div>
         </div>
     );
   
