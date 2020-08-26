@@ -1,0 +1,22 @@
+#CardColor{
+    display: flex;
+    justify-content: center;
+}
+
+.ColorSelect{
+    width: 950px;
+    height: 450px;
+    justify-content: center;
+}
+@media (max-width: 768px){
+    .ColorSelect{
+        width: 400px;
+        margin: auto;
+    }
+}
+@media (max-width: 991px){
+    #CardColor{
+            width: 400px;
+            margin: auto;
+    }
+}

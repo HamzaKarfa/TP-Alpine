@@ -14,13 +14,12 @@ const VersionListConnect = ({VersionsList}) => {
     const displayVersions = () => {    
         
             return (
-                <>
+            
+                <div className="row versionSelect text-center mb-5">
                     {Object.keys(VersionsList).map(key => (
-                        <div className="col versionSection text-center mb-5">
-                            <VersionSelect key={VersionsList[key].id} Version={VersionsList[key]} VersionList={VersionsList}/>
-                        </div>
+                        <VersionSelect key={VersionsList[key].id} Version={VersionsList[key]} VersionList={VersionsList}/>
                     ))}
-                </>
+                </div>
             )
 
         

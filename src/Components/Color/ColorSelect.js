@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 import {SelectColor} from "../../action/index.js";
+import './Color.css'
 
 const stateColorSelect = (state,propsColorSelect) => {
     return { stateProps: propsColorSelect };
@@ -12,8 +13,8 @@ const stateColorSelect = (state,propsColorSelect) => {
 };
 const ColorSelectConnect=({stateProps,SelectColors})=> {
     return (
-			<div className=" d-flex card-columns">
-				<div className="card">
+			<div className="d-flex col-lg-4 col-md-6 mb-2" >
+				<div className="card"id="CardColor">
 					<img
 						  className="card-img-top img-fluid"
 						  src={stateProps.Color.picture}

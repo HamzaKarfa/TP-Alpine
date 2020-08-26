@@ -26,7 +26,7 @@ const WheelsSelectConnect=({stateProps,state,SelectWheels})=> {
 	}
 	function displayWheels(){
 		return (
-			<div className=" d-flex  card-columns">
+			<div className=" d-flex card-columns" id="cardWheels">
 				<div className="card">
 					<img
 						  className="card-img-top img-fluid"

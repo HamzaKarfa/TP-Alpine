@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 import ColorSelect from './ColorSelect';
-import "../responsive.css";
+import './Color.css';
 const dispatchColorList =() =>{
 
 };
@@ -15,13 +15,12 @@ const ColorListConnect = ({ColorList}) => {
     const displayColorList = () => {
 
         return (
-            <>
+            <div className="row ColorSelect text-center">
                 {Object.keys(ColorList).map(key => (
-                    <div className="col ColorSelect text-center mb-5">
                         <ColorSelect key={ColorList[key].id} Color={ColorList[key]} ColorList={ColorList}/>
-                    </div>
-                ))}
-            </>
+                        ))}
+            </div>
+
         )
         }
 

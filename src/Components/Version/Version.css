@@ -1,0 +1,15 @@
+#CardVersion{
+
+    display: flex;
+    justify-content: center;
+}
+.versionSelect{
+    width: 750px;
+    justify-content: center;
+}
+@media (max-width: 991px){
+    .versionSection{
+        width: 450px;
+        margin: auto;
+    }
+}

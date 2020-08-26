@@ -49,7 +49,7 @@ const AppConnect = ({CarElement})=> {
         <Router>
             <div>
                   <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-primary mb-5" >
-                     <Link className="m-2 navbar-brand" to="/ ">ALPINE A110</Link>
+                     <Link className="m-2 navbar-brand" to="/">ALPINE A110</Link>
                       <button
                         className="navbar-toggler"
                         type="button"
@@ -64,39 +64,42 @@ const AppConnect = ({CarElement})=> {
                         className="collapse navbar-collapse  "
                         id="navbarNav" >
                             <ul className="navbar-nav ml-auto" >
-                              <li className="nav-item active  " >
-                                   <Link className="m-2  nav-link" to="/Version">Version</Link>
-                              </li >
-                              <li className="nav-item" >
-                                  <Link className="m-2 nav-link" to="/Couleur">Couleur</Link>
-                              </li >
-                              <li className="nav-item" >
-                                  <Link className="m-2 nav-link" to="/Jantes">Jantes</Link>
-                              </li >
-                                <li className="nav-item" >
-                                   <Link className="m-2 nav-link" to="/Scellerie">Scellerie</Link>
-                              </li >
-                                <li className="nav-item" >
-                                   <Link className="m-2 nav-link"  to="/Equipement">Equipement</Link>
-                              </li >
-                                <li className="nav-item" >
+
+                                <li className="nav-item active  " >
+                                    <Link className="m-2 nav-link" to="/Version">Version</Link>
+                                </li >
+                                <li className="nav-item  active" >
+                                    <Link className="m-2 nav-link" to="/Couleur">Couleur</Link>
+                                </li >
+                                <li className="nav-item  active" >
+                                    <Link className="m-2 nav-link" to="/Jantes">Jantes</Link>
+                                </li >
+                                <li className="nav-item  active" >
+                                    <Link className="m-2 nav-link" to="/Scellerie">Scellerie</Link>
+                                </li >
+                                  <li className="nav-item  active" >
+                                    <Link className="m-2 nav-link"  to="/Equipement">Equipement</Link>
+                                </li >
+                                  <li className="nav-item  active" >
                                     <Link className="m-2 nav-link" to="/Accessory">Accessory</Link>
-                              </li >
+                                </li >
                             </ul >
                     </div >
                 </nav >
                 <br />
-                 <Header/>
+                <br />
+                <br />
+                <br />
+ 
                {carModelisation()}
                 <Switch>
-                    <Route path="/ ">
 
-                    </Route>
                     <Route path="/Version">
+                            <h3 class="my-4 text-center" >Choisissez votre Version </h3>
                             <VersionList />
                     </Route>
                     <Route path="/Couleur">
-                            <h3 class="my-4 text-center" >Choisissez votre couleur </h3 >
+                            <h3 class="my-4 text-center" >Choisissez votre couleur </h3>
                             <ColorList />
                     </Route>
                     <Route path="/Jantes">
@@ -112,6 +115,9 @@ const AppConnect = ({CarElement})=> {
                     </Route>
                     <Route path="/Accessory">
                             <AccessoryList />
+                    </Route>
+                    <Route path="/">
+                        <Header/>
                     </Route>
                 </Switch>
                
