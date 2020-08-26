@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from "react-redux";
-
+import "./CarModelisation.css";
 
 const stateCarModelisation = (state) => {
 
@@ -39,21 +39,22 @@ const CarModelisationConnect=({state}) => {
         }
     }
     return (
-        <section id="carouselExampleInterval" className="carousel slide w-75" data-ride="carousel">
-            <div className="carousel-inner">
-                    {DisplayCaroussel()}
+        <section className="container d-flex justify-content-center mb-2">
+            <div id="carouselExampleInterval " className="carousel slide w-75 col-8 " data-ride="carousel">
+                <div className="carousel-inner">
+                        {DisplayCaroussel()}
+                </div>
+                <a className="carousel-control-prev previous" href="#carouselExampleInterval" role="button" data-slide="prev">
+                    <span className="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+                    <span className="sr-only">Previous</span>
+                </a>
+                <a className="carousel-control-next next " href="#carouselExampleInterval" role="button" data-slide="next">
+                    <span className="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+                    <span className="sr-only">Next</span>
+                </a>
             </div>
-            <a className="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="sr-only">Previous</span>
-            </a>
-            <a className="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="sr-only">Next</span>
-            </a>
         </section>
     )
-
 }
   
 
