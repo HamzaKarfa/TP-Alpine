@@ -20,22 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48316c92-7af8-49f8-8042-4351161f9841" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/responsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Accessoire/AccesoireList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Accessoire/AccesoireList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Accessoire/AccesoireSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Accessoire/AccesoireSelect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Color/ColorList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Color/ColorList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Color/ColorSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Color/ColorSelect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Equipement/EquipementList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Equipement/EquipementList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Equipement/EquipementSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Equipement/EquipementSelect.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Scellerie/ScellerieList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Scellerie/ScellerieList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Scellerie/ScellerieSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Scellerie/ScellerieSelect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Version/VersionList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Version/VersionList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Version/VersionSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Version/VersionSelect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Wheels/WheelsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Wheels/WheelsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Wheels/WheelsSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Wheels/WheelsSelect.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1598349550444</updated>
       <workItem from="1598349551585" duration="245000" />
-      <workItem from="1598415598136" duration="3496000" />
+      <workItem from="1598415598136" duration="3841000" />
     </task>
     <servers />
   </component>

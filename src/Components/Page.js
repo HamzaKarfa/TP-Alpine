@@ -24,8 +24,7 @@ const AppConnect = ({CarElement})=> {
     }
     return (
         <>
-       
-        {carModelisation()}
+        
         <Router>
             <div>
                   <nav className="navbar navbar-expand-lg navbar-dark bg-primary mb-5" >
@@ -65,10 +64,10 @@ const AppConnect = ({CarElement})=> {
                             </ul >
                     </div >
                 </nav >
-                <Header/>
+                 <Header/>
+               {carModelisation()}
                 <Switch>
-
-                    <Route path="/">
+                    <Route path="/ ">
                             <VersionList />
                     </Route>
                     <Route path="/Couleur">
@@ -90,9 +89,10 @@ const AppConnect = ({CarElement})=> {
                             <AccessoryList />
                     </Route>
                 </Switch>
+               
             </div>
         </Router>
-      </>);  
+      </>);
 }
 const App = connect(state)(AppConnect) 
 
