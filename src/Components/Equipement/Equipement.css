@@ -21,4 +21,6 @@
     justify-content: center;
 }
 }
-
+.EquipementNav{
+    z-index: 1;
+}

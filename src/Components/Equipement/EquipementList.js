@@ -19,12 +19,12 @@ const EquipementListConnect = ({EquipementList}) => {
         if (key1 === "design") {
             return (
                 <Route path= {"/"}>
-                    <EquipementSelect key={EquipementList[key1]} Equipement={EquipementList[key1]} EquipementList={EquipementList} name={key1}/>
+                    <EquipementSelect key={EquipementList[key1]} Equipement={EquipementList[key1]} name={key1}/>
                 </Route>)
         }else{
             return (
                 <Route path= {"/"+key1}>
-                    <EquipementSelect key={EquipementList[key1]} Equipement={EquipementList[key1]} EquipementList={EquipementList} name={key1}/>
+                    <EquipementSelect key={EquipementList[key1]} Equipement={EquipementList[key1]} name={key1}/>
                 </Route>)
         }
     }
@@ -36,7 +36,7 @@ const EquipementListConnect = ({EquipementList}) => {
                     <h3 class="my-4 text-center" >Choisissez vos équipements </h3>
                     <ul className="nav p-5 mb-3 justify-content-center ">
                         {Object.keys(EquipementList).map(key1 => (   
-                            <li  className="p-2 text-center " >
+                            <li  className="p-2 text-center EquipementNav" >
                                 <Link className="btn btn-primary" to= {key1.toString()}>
                                     {key1}
                                 </Link>

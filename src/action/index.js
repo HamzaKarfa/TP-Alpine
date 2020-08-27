@@ -8,7 +8,9 @@ export  function SelectColor(payload) {
 export  function SelectWheel(payload) {
    return { type :'SELECT_WHEEL',payload: payload}
 };
-
 export  function SelectScellerie(payload) {
    return { type :'SELECT_SCELLERIE',payload: payload}
 };
+export  function SelectEquipement(payload) {
+    return { type :'SELECT_EQUIPEMENT',payload: payload}
+ };

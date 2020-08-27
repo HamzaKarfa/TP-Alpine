@@ -20,9 +20,9 @@ a{
 .Caroussel{
     animation-name: CarousselEffect;
     animation-duration: 2s;
-    height: 10vh;
+    height: 100vh;
 }
-@keyframes CarousselEffect {
+/* @keyframes CarousselEffect {
     from {
         height: 100vh;
 
@@ -34,4 +34,4 @@ a{
 }
 img{
     width: 0, 100%;
-}
+} */

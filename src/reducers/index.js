@@ -254,7 +254,6 @@ function rootReducer(state = initialState, action) {
             return newState
 
         case 'SELECT_WHEEL' :
-            console.log("COLOR",action.payload.Wheels.name)
             newState = { 
                 ...state,
                 modelisation:{ 
@@ -282,14 +281,34 @@ function rootReducer(state = initialState, action) {
                         version:{
                             ...state.modelisation.car.version
                         },
-                    color: { ...state.modelisation.car.color},
-                    wheels : {...state.modelisation.car.wheels},
-                    Scellerie : action.payload
+                        color: { ...state.modelisation.car.color},
+                        wheels : {...state.modelisation.car.wheels},
+                        scellerie : action.payload,
+                        equipement : []
                     }
                 }
             }
             return newState
-  
+        case 'SELECT_EQUIPEMENT':
+            newState = {               
+                    ...state,
+                modelisation:{ 
+                    ...state.modelisation,
+                    car : {
+                        ...state.modelisation.car,
+                        version:{
+                            ...state.modelisation.car.version
+                        },
+                        color: { ...state.modelisation.car.color},
+                        wheels : {...state.modelisation.car.wheels},
+                        scellerie :  {...state.modelisation.car.scellerie},
+                        equipement : state.modelisation.car.equipement.concat(action.payload)
+                        
+                    }
+                }
+            }
+            console.log(newState)
+            return newState
         default: 
             return state
     }
