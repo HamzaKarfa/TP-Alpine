@@ -7,6 +7,8 @@
     width: 950px;
     height: 450px;
     justify-content: center;
+    margin: 0 auto;
+
 }
 @media (max-width: 768px){
     .ColorSelect{

@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from "react-redux";
 import AccessorySelect from './AccesoireSelect';
 import {  BrowserRouter as Router,  Switch,  Route,  Link} from "react-router-dom";
+import './Accessoire.css';
+
 const dispatchAccessoryList =() =>{
 
 };
@@ -11,7 +13,19 @@ const stateAccessoryList = (state) => {
 };
 
 const AccessoryListConnect = ({AccessoryList}) => {
-
+        function routeAccessoire(key1) {
+            if (key1 === "safetyTransport") {
+                return (
+                    <Route path= {"/"}>
+                        <AccessorySelect key={AccessoryList[key1]} Accessory={AccessoryList[key1]} AccessoryList={AccessoryList} name={key1}/>
+                    </Route>)
+            }else{
+                return (
+                    <Route path= {"/"+key1}>
+                        <AccessorySelect key={AccessoryList[key1]} Accessory={AccessoryList[key1]} AccessoryList={AccessoryList} name={key1}/>
+                    </Route>)
+            }
+        }
         return (
             <Router>
                 <div>
@@ -28,16 +42,13 @@ const AccessoryListConnect = ({AccessoryList}) => {
                         </ul>
                     </nav>
                     <Switch>
-                        {Object.keys(AccessoryList).map(key1 => (   
-                            <Route path= {"/"+key1}>
-                               <div className="container">
-                                  <div className="cardResponsive">
-                                    <AccessorySelect key={AccessoryList[key1]} Accessory={AccessoryList[key1]} AccessoryList={AccessoryList} name={key1}/>
-                                </div>
-                               </div>
-                               
-                            </Route>
-                        ))}
+                        <div className="container">
+                            <div className="row AccessoireSelect text-center">
+                                {Object.keys(AccessoryList).reverse().map(key1 => (  
+                                        routeAccessoire(key1)
+                                ))}
+                            </div>
+                        </div>
                     </Switch>
                 </div>
             </Router>

@@ -6,13 +6,13 @@
 .WheelsSelect{
     width: 950px;
     justify-content: center;
+    margin: 0 auto;
 
 }
 @media (max-width: 768px){
     .WheelsSelect{
         width: 400px;
         margin: auto;
-        
     }
 }
 @media (max-width: 991px){

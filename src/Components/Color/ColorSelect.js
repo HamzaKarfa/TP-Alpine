@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from "react-redux";
 import {SelectColor} from "../../action/index.js";
 import './Color.css';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const stateColorSelect = (state,propsColorSelect) => {
     return { stateProps: propsColorSelect };
@@ -25,7 +26,9 @@ const ColorSelectConnect=({stateProps,SelectColors})=> {
 						<p className="card-text">
                             {stateProps.Color.name}
 						</p>
-						<button className="btn btn-outline-primary" onClick={SelectColors}>selectionner</button>
+						<Link to="/Jantes">
+							<button className="btn btn-outline-primary" onClick={SelectColors}>selectionner</button>
+						</Link>
 					</div>
 				</div>
 			</div>

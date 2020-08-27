@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from "react-redux";
+import "../CarModelisation.css";
 
 const stateCarColorModelisation = (state) => {
 
@@ -38,20 +39,20 @@ const CarColorModelisationConnect=({state}) => {
         if (key === "1") {
             return (
                 <div className="carousel-item active" data-interval="3000">
-                    <img src={imgSrc[key]} className="d-block w-100" />
+                    <img src={imgSrc[key]} className="d-block w-100 img-fluid" id="imgCaroussel" alt="Responsive image"/>
                 </div>
             )
         } else {
             return (
             <div className="carousel-item" data-interval="3000">
-                <img src={imgSrc[key]} className="d-block w-100" />
+                <img src={imgSrc[key]} className="d-block w-100 img-fluid" id="imgCaroussel" alt="Responsive image" />
             </div>
             )
         }
     }
     return (
-        <section className="container d-flex justify-content-center mb-2">
-            <div id="carouselExampleInterval" className="carousel slide w-75 col-8" data-ride="carousel">
+        <section className="fixed-top Model container d-flex justify-content-center mb-3 Caroussel">
+            <div id="carouselExampleInterval" className="carousel slide w-100 col-12 " data-ride="carousel">
                 <div className="carousel-inner">
                         {DisplayCaroussel()}
                 </div>

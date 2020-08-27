@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from "react-redux";
+import "../CarModelisation.css";
 
 const stateCarWheelsModelisation = (state) => {
 
@@ -8,8 +9,6 @@ const stateCarWheelsModelisation = (state) => {
   
 };
 const CarWheelsModelisationConnect=({state}) => {
-
-
     function DisplayCaroussel(){
         if (state.car.version.name === "Legende") {
             if (state.allPictures === undefined) {
@@ -32,7 +31,6 @@ const CarWheelsModelisationConnect=({state}) => {
             )))
             }
         }
-    
     }
     function DisplayItemCaroussel(key,imgSrc){
         if (key === "1") {
@@ -50,9 +48,9 @@ const CarWheelsModelisationConnect=({state}) => {
         }
     }
     return (
-        <section className="container d-flex justify-content-center mb-2">
-            <div id="carouselExampleInterval" className="carousel slide w-75 col-8" data-ride="carousel">
-                <div className="carousel-inner">
+        <section className="fixed-top Model container d-flex justify-content-center mb-3 Caroussel">
+            <div id="carouselExampleInterval" className="carousel slide w-100 col-12" data-ride="carousel">
+                <div className="carousel-inner ">
                         {DisplayCaroussel()}
                 </div>
                 <a className="carousel-control-prev previous" href="#carouselExampleInterval" role="button" data-slide="prev">

@@ -2,7 +2,8 @@ import React from 'react';
 import { connect } from "react-redux";
 import {SelectWheel} from "../../action/index.js";
 import './Wheels.css'
-
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import CarWheelsModelisation from "../CarModelisation/CarWheelsModelisation";
 const stateWheelsSelect = (state,propsWheelsSelect) => {
 	return { stateProps: propsWheelsSelect,
 			state:state};
@@ -38,7 +39,9 @@ const WheelsSelectConnect=({stateProps,state,SelectWheels})=> {
 						<p className="card-text">
 							{stateProps.Wheels.description}
 						</p>
-						<button className="btn btn-outline-primary" onClick={SelectWheels} >selectionner</button>
+						<Link to="/Scellerie">
+							<button className="btn btn-outline-primary" onClick={SelectWheels} >selectionner</button>
+						</Link>
 					</div>
 				</div>
 			</div>

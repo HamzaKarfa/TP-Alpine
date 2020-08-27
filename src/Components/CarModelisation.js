@@ -39,8 +39,9 @@ const CarModelisationConnect=({state}) => {
         }
     }
     return (
-        <section className="container d-flex justify-content-center mb-2">
-            <div id="carouselExampleInterval" className="carousel slide w-75 col-8" data-ride="carousel">
+        <section className="fixed-top Model container d-flex justify-content-center mb-3 Caroussel">
+
+            <div id="carouselExampleInterval" className="carousel slide w-100 h-100 col-12" data-ride="carousel">
                 <div className="carousel-inner">
                         {DisplayCaroussel()}
                 </div>
@@ -53,7 +54,8 @@ const CarModelisationConnect=({state}) => {
                     <span className="sr-only">Next</span>
                 </a>
             </div>
-        </section>
+            </section>
+     
     )
 }
   

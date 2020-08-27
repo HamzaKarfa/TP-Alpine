@@ -2,6 +2,9 @@ import React from 'react';
 import { connect } from "react-redux";
 import EquipementSelect from './EquipementSelect';
 import {  BrowserRouter as Router,  Switch,  Route,  Link} from "react-router-dom";
+import './Equipement.css';
+
+
 const dispatchEquipementList =() =>{
 
 };
@@ -16,34 +19,13 @@ const EquipementListConnect = ({EquipementList}) => {
         if (key1 === "design") {
             return (
                 <Route path= {"/"}>
-                    <div className="container">
-                        <div className="cardResponsive">
-                            <EquipementSelect key={EquipementList[key1]} Equipement={EquipementList[key1]} EquipementList={EquipementList} name={key1}/>
-                        </div>
-                    </div>
+                    <EquipementSelect key={EquipementList[key1]} Equipement={EquipementList[key1]} EquipementList={EquipementList} name={key1}/>
                 </Route>)
         }else{
             return (
                 <Route path= {"/"+key1}>
-                    <div className="container">
-                        <div className="cardResponsive">
-                            <EquipementSelect key={EquipementList[key1]} Equipement={EquipementList[key1]} EquipementList={EquipementList} name={key1}/>
-                        </div>
-                    </div>
+                    <EquipementSelect key={EquipementList[key1]} Equipement={EquipementList[key1]} EquipementList={EquipementList} name={key1}/>
                 </Route>)
-        }
-    }
-    function linkEquipement(key1) {
-        if (key1 === "design") {
-            return (
-                <Link className="btn btn-primary" to= {key1.toString()}>
-                {key1}
-                </Link>)
-        }else{
-            return (
-                <Link className="btn btn-primary" to= {key1.toString()}>
-                    {key1}
-                </Link>)
         }
     }
 
@@ -63,19 +45,17 @@ const EquipementListConnect = ({EquipementList}) => {
                     </ul>
                 </nav>
                 <Switch>
-                    {Object.keys(EquipementList).reverse().map(key1 => (  
-                        routeEquipement(key1)
-
-                    ))}
+                    <div className="container-fluid">
+                        <div className="row EquipementSelect text-center">
+                            {Object.keys(EquipementList).reverse().map(key1 => (  
+                                    routeEquipement(key1)
+                            ))}
+                        </div>
+                    </div>
                 </Switch>
             </div>
         </Router>
-           
-            
-
-
         )
-    
   
 }
 const EquipementList = connect(stateEquipementList,dispatchEquipementList)(EquipementListConnect) 

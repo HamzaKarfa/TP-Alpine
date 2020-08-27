@@ -1,23 +1,24 @@
-#CardVersion{
+#CardEquipement{
+        width: 450px;
     display: flex;
     justify-content: center;
 }
-.versionSelect{
+.EquipementSelect{
     width: 750px;
     justify-content: center;
     margin: 0 auto;
 }
 @media (max-width: 768px){
-    .versionSection{
+    .EquipementSection{
         width: 450px;
-        margin: 0 auto;
-    }
+    justify-content: center;
+}
 }
 @media (max-width: 991px){
-    #CardVersion{
+    #CardEquipement{
         width: 450px;
         margin: 0 auto;
-    }
+    justify-content: center;
 }
-
+}
 

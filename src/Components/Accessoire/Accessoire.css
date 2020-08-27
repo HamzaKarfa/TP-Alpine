@@ -1,23 +1,22 @@
-#CardVersion{
+#CardAccessoire{
     display: flex;
     justify-content: center;
 }
-.versionSelect{
+.AccessoireSelect{
     width: 750px;
     justify-content: center;
     margin: 0 auto;
 }
 @media (max-width: 768px){
-    .versionSection{
+    .AccessoireSection{
         width: 450px;
         margin: 0 auto;
     }
 }
 @media (max-width: 991px){
-    #CardVersion{
+    #CardAccessoire{
         width: 450px;
         margin: 0 auto;
     }
 }
-
 

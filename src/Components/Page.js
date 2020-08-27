@@ -22,7 +22,6 @@ const AppConnect = ({CarElement})=> {
         if (CarElement === "") {
             return 
         }else{
-            console.log(CarElement)
             if (CarElement.car.version.name === "Legende") {
                 if (CarElement.car.version.allPictures.blanc === undefined) {
                     return <CarColorModelisation />
@@ -82,17 +81,17 @@ const AppConnect = ({CarElement})=> {
                                 </li >
                             </ul >
                         </div >
-                </nav >
+                </nav>
                 <br />
                 <br />
                 <br />
                 <br />
- 
-               {carModelisation()}
+
+                    {carModelisation()}
+            
                 <Switch>
 
                     <Route path="/Version">
-                            <h3 class="my-4 text-center" >Choisissez votre Version </h3>
                             <VersionList />
                     </Route>
                     <Route path="/Couleur">

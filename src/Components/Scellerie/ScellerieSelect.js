@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from "react-redux";
 import './Scellerie.css';
 import {SelectScellerie} from "../../action/index.js";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 
 const stateScellerieSelect = (state,propsScellerieSelect) => {
@@ -24,7 +25,10 @@ const ScellerieSelectConnect=({stateProps,SelectScelleries})=> {
 					/>
 					<div className="card-body">
 						<h4 className="card-title text-capitalize">{stateProps.Scellerie.name} </h4>
-						<button className="btn btn-outline-primary" onClick={SelectScelleries}>selectionner</button>
+						<Link to="/Equipement">
+							<button className="btn btn-outline-primary" onClick={SelectScelleries}>selectionner</button>
+						</Link>
+
 					</div>
 				</div>
 			</div>

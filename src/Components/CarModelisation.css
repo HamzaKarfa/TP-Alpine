@@ -14,3 +14,24 @@
 .next:hover{
     background: linear-gradient(to right, rgba(0,0,0,0),rgba(0,0,0,0.5)) ;
 }
+a{
+    z-index: 1;
+}
+.Caroussel{
+    animation-name: CarousselEffect;
+    animation-duration: 2s;
+    height: 10vh;
+}
+@keyframes CarousselEffect {
+    from {
+        height: 100vh;
+
+
+}
+    to {
+        height: 10vh;
+}
+}
+img{
+    width: 0, 100%;
+}
