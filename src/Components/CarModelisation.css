@@ -17,21 +17,3 @@
 a{
     z-index: 1;
 }
-.Caroussel{
-    animation-name: CarousselEffect;
-    animation-duration: 2s;
-    height: 10vh;
-}
-@keyframes CarousselEffect {
-    from {
-        height: 100vh;
-
-
-}
-    to {
-        height: 10vh;
-}
-}
-img{
-    width: 0, 100%;
-}

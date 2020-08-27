@@ -47,7 +47,7 @@ const AppConnect = ({CarElement})=> {
         
         <Router>
             <div>
-                  <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-primary mb-5" >
+                  <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-primary " >
                      <Link className="m-2 navbar-brand" to="/">ALPINE A110</Link>
                         <button
                             className="navbar-toggler"
