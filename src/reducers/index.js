@@ -221,8 +221,7 @@ const initialState = {
             }
         }
     },
-    modelisation: "",
-    order: []
+    modelisation: ""
   };
    
 function rootReducer(state = initialState, action) {
@@ -235,8 +234,8 @@ function rootReducer(state = initialState, action) {
                 ...state,
                 modelisation : { car :{version: action.payload} } 
             }
-            console.log(newState)
             return newState
+
         case 'SELECT_COLOR' :
             newState = { 
                 ...state,
@@ -252,8 +251,8 @@ function rootReducer(state = initialState, action) {
                     }
                 }
             }
-            console.log(newState)
             return newState
+
         case 'SELECT_WHEEL' :
             console.log("COLOR",action.payload.Wheels.name)
             newState = { 
@@ -271,40 +270,26 @@ function rootReducer(state = initialState, action) {
                     }
                 }
             }
-            console.log(newState)
             return newState
-        // case 'HIT_MONSTER':
-        //      newState = { 
-        //         ...state,
-        //         monster : {
-        //             ...state.monster,
-        //             pv: state.monster.pv -50
-        //         },
-        //         players : {
-        //             ...state.players,
-        //             [action.payload]:{
-        //                 ...state.players[action.payload],
-        //                 mana: state.players[action.payload].mana -5,
-        //             }
-        //         }  
-        //     }
-        //     return newState
-        // case 'ADD_PLAYER_TURN':
-        //     newState = { 
-        //         ...state,
-        //         playerTurn : state.playerTurn.concat(action.payload.id)
-        //     }
-        //     return newState        
-        // case 'PLAYER_DEAD':
-        //     newState = { 
-        //         ...state,
-        //         players: delete state.players[action.payload],
-        //         players : {
-        //             ...state.players,
-        //         },
-        //         playerTurn : []
-        //     }
-        //     return newState   
+
+        case 'SELECT_SCELLERIE':
+            newState = {               
+                    ...state,
+                modelisation:{ 
+                    ...state.modelisation,
+                    car : {
+                        ...state.modelisation.car,
+                        version:{
+                            ...state.modelisation.car.version
+                        },
+                    color: { ...state.modelisation.car.color},
+                    wheels : {...state.modelisation.car.wheels},
+                    Scellerie : action.payload
+                    }
+                }
+            }
+            return newState
+  
         default: 
             return state
     }

@@ -1,0 +1,23 @@
+#CardScellerie{
+    display: flex;
+    justify-content: center;
+}
+
+.ScellerieSelect{
+    width: 950px;
+    justify-content: center;
+
+}
+@media (max-width: 768px){
+    .ScellerieSelect{
+        width: 400px;
+        margin: auto;
+        
+    }
+}
+@media (max-width: 991px){
+    #CardScellerie{
+            width: 400px;
+            margin: auto;
+    }
+}

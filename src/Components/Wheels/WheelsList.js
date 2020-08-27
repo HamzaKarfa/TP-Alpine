@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from "react-redux";
 import WheelsSelect from './WheelsSelect';
+import './Wheels.css';
+
 const dispatchWheelsList =() =>{
 
 };
@@ -16,9 +18,8 @@ const WheelsListConnect = ({WheelsList,state}) => {
     function conditionWheelsLegend(type,key) {
         if (type.name === "Legende") {
             return (  
-            <div className="col WheelsList text-center mb-5">
                 <WheelsSelect key={WheelsList[key].id} Wheels={WheelsList[key]} WheelsList={WheelsList}/>
-            </div>)
+            )
         }else{
             return
         }
@@ -26,9 +27,8 @@ const WheelsListConnect = ({WheelsList,state}) => {
     function conditionWheelsPure(type,key) {
         if (type.name === "Standard" || type.name === "Serac" ) {
             return (  
-            <div className="col WheelsList text-center mb-5">
                 <WheelsSelect key={WheelsList[key].id} Wheels={WheelsList[key]} WheelsList={WheelsList}/>
-            </div>)
+            )
         }else{
             return
         }
@@ -37,27 +37,30 @@ const WheelsListConnect = ({WheelsList,state}) => {
         if (state.modelisation !== "" && state.modelisation.car.version.name === "Legende") {
 
             return (
-                Object.keys(WheelsList).map(key => (
+            <div className="row WheelsSelect text-center mb-5">
+                {Object.keys(WheelsList).map(key => (
                     conditionWheelsLegend(WheelsList[key],key)
-                ))
+                ))}
+            </div>
             )
         } else if (state.modelisation !== "" && state.modelisation.car.version.name === "Pure"){
             return (
-                Object.keys(WheelsList).map(key => (
-                    conditionWheelsPure(WheelsList[key],key)
-                ))
+                <div className="row WheelsSelect text-center mb-5">
+                    {Object.keys(WheelsList).map(key => (
+                        conditionWheelsPure(WheelsList[key],key)
+                    ))}
+                </div>
             )
         }else{
             return (
-                Object.keys(WheelsList).map(key => (
-                    console.log(WheelsList[key]),
-                    <div className="col WheelsList text-center mb-5">
+                <div className="row WheelsSelect text-center mb-5">
+                    {Object.keys(WheelsList).map(key => (
                         <WheelsSelect key={WheelsList[key].id} Wheels={WheelsList[key]} WheelsList={WheelsList}/>
-                    </div>
-                ))
+                    ))}
+                </div>
             )
         }
-        }
+    }
 
     return (
         <div className="container">

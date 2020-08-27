@@ -1,0 +1,23 @@
+#CardWheels{
+    display: flex;
+    justify-content: center;
+}
+
+.WheelsSelect{
+    width: 950px;
+    justify-content: center;
+
+}
+@media (max-width: 768px){
+    .WheelsSelect{
+        width: 400px;
+        margin: auto;
+        
+    }
+}
+@media (max-width: 991px){
+    #CardWheels{
+            width: 400px;
+            margin: auto;
+    }
+}

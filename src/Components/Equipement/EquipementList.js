@@ -12,7 +12,40 @@ const stateEquipementList = (state) => {
 
 const EquipementListConnect = ({EquipementList}) => {
        
-
+    function routeEquipement(key1) {
+        if (key1 === "design") {
+            return (
+                <Route path= {"/"}>
+                    <div className="container">
+                        <div className="cardResponsive">
+                            <EquipementSelect key={EquipementList[key1]} Equipement={EquipementList[key1]} EquipementList={EquipementList} name={key1}/>
+                        </div>
+                    </div>
+                </Route>)
+        }else{
+            return (
+                <Route path= {"/"+key1}>
+                    <div className="container">
+                        <div className="cardResponsive">
+                            <EquipementSelect key={EquipementList[key1]} Equipement={EquipementList[key1]} EquipementList={EquipementList} name={key1}/>
+                        </div>
+                    </div>
+                </Route>)
+        }
+    }
+    function linkEquipement(key1) {
+        if (key1 === "design") {
+            return (
+                <Link className="btn btn-primary" to= {key1.toString()}>
+                {key1}
+                </Link>)
+        }else{
+            return (
+                <Link className="btn btn-primary" to= {key1.toString()}>
+                    {key1}
+                </Link>)
+        }
+    }
 
         return (
         <Router>
@@ -30,15 +63,9 @@ const EquipementListConnect = ({EquipementList}) => {
                     </ul>
                 </nav>
                 <Switch>
-                    {Object.keys(EquipementList).map(key1 => (   
-                        <Route path= {"/"+key1}>
-                           <div className="container">
-                                <div className="cardResponsive">
-                                <EquipementSelect key={EquipementList[key1]} Equipement={EquipementList[key1]} EquipementList={EquipementList} name={key1}/>
-                            </div>
-                           </div>
-                          
-                        </Route>
+                    {Object.keys(EquipementList).reverse().map(key1 => (  
+                        routeEquipement(key1)
+
                     ))}
                 </Switch>
             </div>

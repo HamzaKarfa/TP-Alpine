@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 import {SelectWheel} from "../../action/index.js";
+import './Wheels.css'
 
 const stateWheelsSelect = (state,propsWheelsSelect) => {
 	return { stateProps: propsWheelsSelect,
@@ -13,7 +14,6 @@ const stateWheelsSelect = (state,propsWheelsSelect) => {
 };
 const WheelsSelectConnect=({stateProps,state,SelectWheels})=> {
 	function displayImgWheels (){
-		console.log(state)
 		if (state.modelisation !== "" && state.modelisation.car.color.color === "noir") {
 			return stateProps.Wheels.picture.noir
 		}else if(state.modelisation !== "" && state.modelisation.car.color.color === "bleu"){
@@ -26,8 +26,8 @@ const WheelsSelectConnect=({stateProps,state,SelectWheels})=> {
 	}
 	function displayWheels(){
 		return (
-			<div className=" d-flex card-columns" id="cardWheels">
-				<div className="card">
+			<div className="d-flex col-lg-4 col-md-6 mb-2" id="cardWheels">
+				<div className="card" id="CardWheels">
 					<img
 						  className="card-img-top img-fluid"
 						  src={displayImgWheels()}
