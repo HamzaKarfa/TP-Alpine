@@ -95,9 +95,7 @@ const AppConnect = ({CarElement})=> {
                     <br />
 
                         {carModelisation()}
-                
                     <Switch>
-
                         <Route path="/Version">
                                 <h5 class="my-4 text-center" >Choisissez votre Version </h5>
                                 <VersionList />
@@ -122,14 +120,12 @@ const AppConnect = ({CarElement})=> {
                                 <AccessoryList />
                         </Route>
                         <Route path="/Recapitulatif">
-
                             <Recapitulatif/>
                         </Route>
                         <Route path="/">
                             <Header/>
                         </Route>
                     </Switch>
-                
                 </div>
             </Router>
         </>
