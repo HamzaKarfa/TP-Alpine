@@ -126,7 +126,9 @@ const AppConnect = ({CarElement})=> {
                                 <AccessoryList />
                         </Route>
                         <Route path="/Recapitulatif">
+
                             {deleteCaroussel()}
+
                             <Recapitulatif/>
                         </Route>
                         <Route path="/">

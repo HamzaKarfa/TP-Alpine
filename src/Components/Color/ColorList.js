@@ -11,6 +11,9 @@ const stateColorList = (state) => {
 };
 
 const ColorListConnect = ({ColorList}) => {
+    if (document.querySelector('.Caroussel') && document.querySelector('.Caroussel').classList.contains('Caroussel-off')) {
+        document.querySelector('.Caroussel').classList.remove('Caroussel-off')
+    }
 
     const displayColorList = () => {
 

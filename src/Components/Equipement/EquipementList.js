@@ -14,6 +14,9 @@ const stateEquipementList = (state) => {
 };
 
 const EquipementListConnect = ({EquipementList}) => {
+    if (document.querySelector('.Caroussel') && document.querySelector('.Caroussel').classList.contains('Caroussel-off')) {
+        document.querySelector('.Caroussel').classList.remove('Caroussel-off')
+    }
        
     function routeEquipement(key1) {
         if (key1 === "design") {

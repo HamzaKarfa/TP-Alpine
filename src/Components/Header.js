@@ -6,7 +6,9 @@ import  "./Header.css";
 const stateHeader = (state) => {
 };
 const HeaderConnect=( ) => {
-
+    if (document.querySelector('.Caroussel')) {
+        document.querySelector('.Caroussel').classList.add('Caroussel-off')
+    }
     return (		
     <header className="col header" >
         <img className="imgHeader img-fluid"
