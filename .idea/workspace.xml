@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48316c92-7af8-49f8-8042-4351161f9841" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Components/Page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Page.js" afterDir="false" />
-    </list>
+    <list default="true" id="48316c92-7af8-49f8-8042-4351161f9841" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,6 +39,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1gaP62CdZ4ypj4cKnzyNRCiIT5U" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />

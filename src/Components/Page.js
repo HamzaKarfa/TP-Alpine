@@ -14,7 +14,6 @@ import CarWheelsModelisation from './CarModelisation/CarWheelsModelisation';
 import Recapitulatif from './Recapitulatif';
 import './Page.css'
 
-
 const state = (state) => {
     return { CarElement: state.modelisation };
 };
@@ -49,10 +48,11 @@ const AppConnect = ({CarElement})=> {
     }
     return (
         <>
-            <Router>
-                <div>
-                    <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-primary mb-5" >
-                        <Link className="m-2 navbar-brand" to="/">ALPINE A110</Link>
+        <Router>
+            <div>
+                  <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-primary " >
+                     <Link className="m-2 navbar-brand" to="/">ALPINE A110</Link>
+
                         <button
                             className="navbar-toggler"
                             type="button"
@@ -120,6 +120,7 @@ const AppConnect = ({CarElement})=> {
                                 <AccessoryList />
                         </Route>
                         <Route path="/Recapitulatif">
+
                             <Recapitulatif/>
                         </Route>
                         <Route path="/">
