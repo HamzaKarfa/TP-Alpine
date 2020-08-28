@@ -1,22 +1,20 @@
- .monsterDead{
-    transform: rotate(-180deg); 
 
-    animation-duration: 2s;
-    animation-name: glissement;
-    animation-iteration-count: 1;
+
+.header{
+
+    background-repeat: no-repeat;
+    background-position: right top;
+    height: 100vh;
+    position: relative;
+ }
+.headerDiv{
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-@keyframes glissement {
-    from {
-        -ms-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -webkit-transform: rotate(0deg); 
-        transform: rotate(0deg); 
-    }
-
-    to {
-        -ms-transform: rotate(-180deg);
-        -moz-transform: rotate(-180deg);
-        -webkit-transform: rotate(-180deg); 
-        transform: rotate(-180deg); 
-    }
-  } 
+.imgHeader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

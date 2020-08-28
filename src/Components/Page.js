@@ -11,6 +11,7 @@ import { connect } from "react-redux";
 import CarModelisation from './CarModelisation';
 import CarColorModelisation from './CarModelisation/CarColorModelisation';
 import CarWheelsModelisation from './CarModelisation/CarWheelsModelisation';
+import Recapitulatif from './Recapitulatif';
 import './Page.css'
 
 
@@ -44,6 +45,11 @@ const AppConnect = ({CarElement})=> {
                 }
             }
             }
+        }
+    }
+    function deleteCaroussel() {
+        if (document.querySelector('.Caroussel')) {
+            document.querySelector('.Caroussel').innerHTML = ""
         }
     }
     return (
@@ -83,6 +89,9 @@ const AppConnect = ({CarElement})=> {
                                 <li className="nav-item  active" >
                                     <Link className="m-2 nav-link" to="/Accessory">Accessory</Link>
                                 </li >
+                                <li className="nav-item  active" >
+                                    <Link className="m-2 nav-link" to="/Recapitulatif">Recapitulatif</Link>
+                                </li >
                             </ul >
                         </div >
                     </nav>
@@ -115,6 +124,10 @@ const AppConnect = ({CarElement})=> {
                         </Route>
                         <Route path="/Accessory">
                                 <AccessoryList />
+                        </Route>
+                        <Route path="/Recapitulatif">
+                            {deleteCaroussel()}
+                            <Recapitulatif/>
                         </Route>
                         <Route path="/">
                             <Header/>
