@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 import WheelsSelect from './WheelsSelect';
+import {  BrowserRouter as Router,  Switch,  Route,  Link} from "react-router-dom";
 import './Wheels.css';
 
 const dispatchWheelsList =() =>{
@@ -66,11 +67,16 @@ const WheelsListConnect = ({WheelsList,state}) => {
     }
 
     return (
-        <div className="container">
-            <div className='cardResponsive'>
-                {displayWheels()}
-            </div>
+        <>
+        <div className="row justify-content-center">
+            <Link className="btn btn-outline-primary mb-4 " to= {"/Recapitulatif"}>
+                Aller au Récapitulatif
+            </Link>
+		</div>
+        <div className='cardResponsive'>
+            {displayWheels()}
         </div>
+        </>
     );
   
 }

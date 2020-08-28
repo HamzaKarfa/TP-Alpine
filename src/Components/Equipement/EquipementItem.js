@@ -14,7 +14,7 @@ const dispatchColorSelect =(dispatch,stateProps) =>{
 }
 const EquipementSelectConnect = ({stateProps,SelectEquipements,state}) => {
     function buttonEquipement() {
-        if (state.modelisation!= '' 
+        if (state.modelisation!= '' && state.modelisation.car.equipement !== undefined
             && state.modelisation.car.equipement[stateProps.EquipementItem.name]!== undefined
             &&state.modelisation.car.equipement[stateProps.EquipementItem.name].name === stateProps.EquipementItem.name) {
             return "btn btn-outline-secondary disabled"
@@ -29,7 +29,7 @@ const EquipementSelectConnect = ({stateProps,SelectEquipements,state}) => {
 			<div className="card-body p-1 mt-2" >
 				<h4 className="card-title text-capitalize" >{stateProps.EquipementItem.name}</h4 >
 				<p className="card-text" >
-					ajoutez  le logo de l'Alpine à votre volant
+					{stateProps.EquipementItem.price}€
 				</p>
 				<button className={buttonEquipement()} onClick={SelectEquipements}>selectionner</button >
 			</div >

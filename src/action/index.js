@@ -17,3 +17,9 @@ export  function SelectEquipement(payload) {
  export  function SelectAccessoire(payload) {
     return { type :'SELECT_ACCESSOIRE',payload: payload}
  };
+ export  function ResetEquipement() {
+   return { type :'RESET_EQUIPEMENT'}
+};
+export  function ResetAccessoire() {
+   return { type :'RESET_ACCESSOIRE'}
+};

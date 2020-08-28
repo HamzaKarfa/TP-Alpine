@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 import ColorSelect from './ColorSelect';
+import {  BrowserRouter as Router,  Switch,  Route,  Link} from "react-router-dom";
 import './Color.css';
 const dispatchColorList =() =>{
 
@@ -28,11 +29,16 @@ const ColorListConnect = ({ColorList}) => {
         }
 
     return (
-        <div className="container">
+        <>
+        <div className="row justify-content-center">
+            <Link className="btn btn-outline-primary mb-4 " to= {"/Recapitulatif"}>
+                Aller au Récapitulatif
+            </Link>
+		</div>
         <div className='cardResponsive'>
             {displayColorList()}
         </div>
-        </div>
+        </>
     );
   
 }

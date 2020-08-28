@@ -329,6 +329,26 @@ function rootReducer(state = initialState, action) {
             }
             console.log(newState)
             return newState
+        case 'RESET_EQUIPEMENT':
+            newState = {               
+                    ...state,
+                modelisation:{ 
+                    ...state.modelisation,
+                    car : {
+                        ...state.modelisation.car,
+                        version:{
+                            ...state.modelisation.car.version
+                        },
+                        color: { ...state.modelisation.car.color},
+                        wheels : {...state.modelisation.car.wheels},
+                        scellerie :  {...state.modelisation.car.scellerie},
+                        equipement : [],
+                        accessoire : []
+                    }
+                }
+            }
+            console.log(newState)
+            return newState
         case 'SELECT_ACCESSOIRE':
             newState = {               
                     ...state,
@@ -346,6 +366,26 @@ function rootReducer(state = initialState, action) {
                         accessoire : {
                             ...state.modelisation.car.accessoire,
                             [action.payload.name] : action.payload },
+                    }
+                }
+            }
+            console.log(newState)
+            return newState
+        case 'SELECT_ACCESSOIRE':
+            newState = {               
+                    ...state,
+                modelisation:{ 
+                    ...state.modelisation,
+                    car : {
+                        ...state.modelisation.car,
+                        version:{
+                            ...state.modelisation.car.version
+                        },
+                        color: { ...state.modelisation.car.color},
+                        wheels : {...state.modelisation.car.wheels},
+                        scellerie :  {...state.modelisation.car.scellerie},
+                        equipement : {...state.modelisation.car.equipement},
+                        accessoire : []
                     }
                 }
             }

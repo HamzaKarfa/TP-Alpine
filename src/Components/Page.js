@@ -78,10 +78,10 @@ const AppConnect = ({CarElement})=> {
                                     <Link className="m-2 nav-link" to="/Scellerie">Scellerie</Link>
                                 </li >
                                 <li className="nav-item  active" >
-                                    <Link className="m-2 nav-link"  to="/Equipement">Equipement</Link>
+                                    <Link className="m-2 nav-link"  to="/Equipement/design">Equipement</Link>
                                 </li >
                                 <li className="nav-item  active" >
-                                    <Link className="m-2 nav-link" to="/Accessory">Accessory</Link>
+                                    <Link className="m-2 nav-link" to="/Accessoire/safetyTransport">Accessory</Link>
                                 </li >
                                 <li className="nav-item  active" >
                                     <Link className="m-2 nav-link" to="/Recapitulatif">Recapitulatif</Link>
@@ -97,26 +97,27 @@ const AppConnect = ({CarElement})=> {
                         {carModelisation()}
                     <Switch>
                         <Route path="/Version">
-                                <h5 class="my-4 text-center" >Choisissez votre Version </h5>
+                                <h5 className="mt-5 text-center" >Choisissez votre Version </h5>
                                 <VersionList />
                         </Route>
                         <Route path="/Couleur">
-                                <h5 class="my-4 text-center" >Choisissez votre couleur </h5>
+                                <h5 className="mt-5 text-center" >Choisissez votre couleur </h5>
                                 <ColorList />
                         </Route>
                         <Route path="/Jantes">
-                            <h5 class="my-4 text-center" >Choisissez vos jantes </h5 >
+                            <h5 className="mt-5 text-center" >Choisissez vos jantes </h5 >
                             <WheelsList />
                         </Route>
                         <Route path="/Scellerie">
-                                <h5 class="my-4 text-center" >Choisissez votre sellerie </h5 >
+                                <h5 className="mt-5 text-center" >Choisissez votre sellerie </h5 >
                                 <ScellerieList />
                         </Route>
-                        <Route path="/Equipement">
-                                <h5 class="my-4 text-center" >Choisissez vos Equipements </h5 >
+                        <Route path="/Equipement/design">
+                                <h5 className="mt-5 text-center" >Choisissez vos Equipements </h5 >
                                 <EquipementList />
                         </Route>
-                        <Route path="/Accessory">
+                        <Route path="/Accessoire/safetyTransport">
+                                <h5 className="mt-5 text-center" >Choisissez vos accessoires </h5>
                                 <AccessoryList />
                         </Route>
                         <Route path="/Recapitulatif">

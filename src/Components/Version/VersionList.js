@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 import VersionSelect from './VersionSelect';
+import {  BrowserRouter as Router,  Switch,  Route,  Link} from "react-router-dom";
 import './Version.css';
 
 const dispatchVersionList =() =>{
@@ -32,12 +33,16 @@ const VersionListConnect = ({VersionsList}) => {
     }
 
     return (
-        <div className="container">
+        <>
+            <div className="row justify-content-center">
+                <Link className="btn btn-outline-primary mb-4 " to= {"/Recapitulatif"}>
+                    Aller au Récapitulatif
+                </Link>
+            </div>
             <div className='cardResponsive'>
-            {displayVersions()}
-        </div>
-        </div>
-       
+                {displayVersions()}
+            </div>
+        </>
     );
   
 }

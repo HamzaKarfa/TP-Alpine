@@ -44,20 +44,17 @@ const RecapitulatifConnect = ({Modelisation}) => {
             <section className="Recapitulatif">
                 <h1 class="my-4 text-center text-uppercase text-primary" >Votre Recapitulatif </h1>
                 <div className="row versionSelect text-center mb-5">
-                {Object.keys(Modelisation).map(key1 => (
-                     console.log("MOULA",Modelisation[key1]),
-                     <div>
-                     <ul className="list-group">
-                        {Object.keys(Modelisation[key1]).map(key2 => (
-
-                            console.log(key2, Modelisation[key1][key2].name),
-                            displayRecapEquipement(Modelisation[key1][key2],key2)
+                    <div>
+                        <ul className="list-group">
+                            {Object.keys(Modelisation).map(key1 => (
+                                Object.keys(Modelisation[key1]).map(key2 => (
+                                    displayRecapEquipement(Modelisation[key1][key2],key2)
+                                ))
                             ))}
-                    </ul>
-                         <div className="separator text-primary "></div>
-                    <h3 className="text-primary text-capitalize mt-3">Prix total : {price + " €"}</h3>
+                        </ul>
+                        <div className="separator text-primary "></div>
+                        <h3 className="text-primary text-capitalize mt-3">Prix total : {price && price + " €"}</h3>
                     </div>
-                 ))}
                 </div>
             </section>
             )

@@ -1,9 +1,10 @@
 #CardAccessoire{
-    display: flex;
+        width: 450px;
+        display: flex;
     justify-content: center;
 }
 .AccessoireSelect{
-    width: 750px;
+    width: 850px;
     justify-content: center;
     margin: 0 auto;
 }

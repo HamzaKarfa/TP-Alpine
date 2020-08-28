@@ -26,11 +26,11 @@ const AccessoireSelectConnect = ({stateProps,SelectAccessoires,state}) => {
 	return (
 		<div className="card"  id="CardAccessoire">
 			<img className="card-img-top img-fluid"
-					src={stateProps.AccessoireItem.picture} />
+					src={"."+stateProps.AccessoireItem.picture} />
 			<div className="card-body p-1 mt-2" >
 				<h4 className="card-title text-capitalize" >{stateProps.AccessoireItem.name}</h4 >
 				<p className="card-text" >
-					ajoutez  le logo de l'Alpine à votre volant
+					{stateProps.AccessoireItem.price}€
 				</p>
 				<button className={buttonAccessoire()} onClick={SelectAccessoires}>selectionner</button >
 			</div >

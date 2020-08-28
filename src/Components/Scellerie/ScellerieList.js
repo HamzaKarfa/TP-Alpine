@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 import ScellerieSelect from './ScellerieSelect';
+import {  BrowserRouter as Router,  Switch,  Route,  Link} from "react-router-dom";
 import './Scellerie.css';
 const dispatchScellerieList =() =>{
 
@@ -67,12 +68,16 @@ const ScellerieListConnect = ({ScellerieList,state}) => {
         }
 
     return (
-        <div className="container">
+        <>
+        <div className="row justify-content-center">
+            <Link className="btn btn-outline-primary mb-4 " to= {"/Recapitulatif"}>
+                Aller au Récapitulatif
+            </Link>
+		</div>
         <div className='cardResponsive'>
             {displayScellerie()}
         </div>
-        
-        </div>
+        </>
     );
   
 }
