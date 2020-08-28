@@ -11,7 +11,7 @@ const EquipementSelectConnect = ({stateProps}) => {
 			return (
 				Object.keys(stateProps.Equipement).map(key2 => (
 					<div className=" d-flex col-xl-4 col-lg-6 col-sm mb-2" >
-						<EquipementItem EquipementItem= {stateProps.Equipement[key2]} />
+						<EquipementItem EquipementItem= {stateProps.Equipement[key2]} key={key2}/>
 					</div >
 				))
 			);

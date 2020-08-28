@@ -18,8 +18,6 @@ a{
     z-index: 1;
 }
 .Caroussel{
-    animation-name: CarousselEffect;
-    animation-duration: 2s;
     height: 100vh;
 }
 /* @keyframes CarousselEffect {
