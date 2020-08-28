@@ -14,6 +14,9 @@ const stateWheelsList = (state) => {
 };
 
 const WheelsListConnect = ({WheelsList,state}) => {
+    if (document.querySelector('.Caroussel') && document.querySelector('.Caroussel').classList.contains('Caroussel-off')) {
+        document.querySelector('.Caroussel').classList.remove('Caroussel-off')
+    }
 
     function conditionWheelsLegend(type,key) {
         if (type.name === "Legende") {

@@ -19,4 +19,7 @@
         margin: 0 auto;
     }
 }
+.AccessoryNav{
+    z-index: 1;
+}
 

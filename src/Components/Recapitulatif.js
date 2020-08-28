@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from "react-redux";
-
+import './Recapitulatif.css'
 
 const stateRecapitulatif = (state) => {
   return { Modelisation: state.modelisation };
@@ -8,6 +8,9 @@ const stateRecapitulatif = (state) => {
 
 const RecapitulatifConnect = ({Modelisation}) => {
     let price = null
+    if (document.querySelector('.Caroussel')) {
+        document.querySelector('.Caroussel').classList.add('Caroussel-off')
+    }
     function displayRecapEquipement(EquipementList,key) {
         
         if (key === "equipement") {
@@ -34,7 +37,7 @@ const RecapitulatifConnect = ({Modelisation}) => {
     const displayRecapitulatif = () => {    
         console.log(Modelisation)
             return (
-            <section>
+            <section className="Recapitulatif">
                 <h3 class="my-4 text-center" >Votre Recapitulatif </h3>
                 <div className="row versionSelect text-center mb-5">
                 {Object.keys(Modelisation).map(key1 => (

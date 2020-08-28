@@ -13,6 +13,9 @@ const stateAccessoryList = (state) => {
 };
 
 const AccessoryListConnect = ({AccessoryList}) => {
+        if (document.querySelector('.Caroussel') && document.querySelector('.Caroussel').classList.contains('Caroussel-off')) {
+            document.querySelector('.Caroussel').classList.remove('Caroussel-off')
+        }
         function routeAccessoire(key1) {
             if (key1 === "safetyTransport") {
                 return (
@@ -33,7 +36,7 @@ const AccessoryListConnect = ({AccessoryList}) => {
                         <h3 class="my-4 text-center" >Choisissez vos équipements </h3>
                         <ul className="nav p-5 mb-3 justify-content-center ">
                             {Object.keys(AccessoryList).map(key1 => (   
-                                <li  className="p-2 text-center " >
+                                <li  className="p-2 text-center AccessoryNav" >
                                     <Link className="btn btn-primary" to= {key1.toString()}>
                                         {key1}
                                     </Link>

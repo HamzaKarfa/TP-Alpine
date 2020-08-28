@@ -12,6 +12,9 @@ const stateScellerieList = (state) => {
 };
 
 const ScellerieListConnect = ({ScellerieList,state}) => {
+    if (document.querySelector('.Caroussel') && document.querySelector('.Caroussel').classList.contains('Caroussel-off')) {
+        document.querySelector('.Caroussel').classList.remove('Caroussel-off')
+    }
     function conditionScellerieLegend(type,key) {
         console.log(state.modelisation.car.version.name)
         if (type.version === state.modelisation.car.version.name.toLowerCase()) {

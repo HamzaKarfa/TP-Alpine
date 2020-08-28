@@ -14,3 +14,6 @@ export  function SelectScellerie(payload) {
 export  function SelectEquipement(payload) {
     return { type :'SELECT_EQUIPEMENT',payload: payload}
  };
+ export  function SelectAccessoire(payload) {
+    return { type :'SELECT_ACCESSOIRE',payload: payload}
+ };

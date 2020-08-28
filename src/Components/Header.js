@@ -6,7 +6,9 @@ import  "./Header.css";
 const stateHeader = (state) => {
 };
 const HeaderConnect=( ) => {
-
+    if (document.querySelector('.Caroussel')) {
+        document.querySelector('.Caroussel').classList.add('Caroussel-off')
+    }
     return (		
     <header className="col my-5" >
         <h1 className="text-uppercase text-center display-3 text-primary" >alpine</h1 >
