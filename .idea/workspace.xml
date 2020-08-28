@@ -19,14 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48316c92-7af8-49f8-8042-4351161f9841" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Recapitulatif.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Page.js" afterDir="false" />
-    </list>
+    <list default="true" id="48316c92-7af8-49f8-8042-4351161f9841" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

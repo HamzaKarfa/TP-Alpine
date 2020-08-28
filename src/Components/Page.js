@@ -14,7 +14,6 @@ import CarWheelsModelisation from './CarModelisation/CarWheelsModelisation';
 import Recapitulatif from './Recapitulatif';
 import './Page.css'
 
-
 const state = (state) => {
     return { CarElement: state.modelisation };
 };
@@ -45,11 +44,6 @@ const AppConnect = ({CarElement})=> {
                 }
             }
             }
-        }
-    }
-    function deleteCaroussel() {
-        if (document.querySelector('.Caroussel')) {
-            document.querySelector('.Caroussel').innerHTML = ""
         }
     }
     return (
@@ -126,8 +120,6 @@ const AppConnect = ({CarElement})=> {
                                 <AccessoryList />
                         </Route>
                         <Route path="/Recapitulatif">
-
-                            {deleteCaroussel()}
 
                             <Recapitulatif/>
                         </Route>
