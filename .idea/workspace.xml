@@ -20,13 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48316c92-7af8-49f8-8042-4351161f9841" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Equipement/EquipementItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/CarModelisation.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CarModelisation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Equipement/Equipement.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Equipement/Equipement.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/CarModelisation/CarColorModelisation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CarModelisation/CarColorModelisation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Equipement/EquipementItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Equipement/EquipementItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Equipement/EquipementList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Equipement/EquipementList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Equipement/EquipementSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Equipement/EquipementSelect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Scellerie/ScellerieSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Scellerie/ScellerieSelect.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

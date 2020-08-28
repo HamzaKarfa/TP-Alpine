@@ -11,7 +11,6 @@ const stateCarColorModelisation = (state) => {
 const CarColorModelisationConnect=({state}) => {
 
     function DisplayCaroussel(){
-        console.log(state)
         if (state.name === "Legende") {
             if (state.allPictures.legende === undefined) {
                 return (Object.keys(state.allPictures).map(key => (

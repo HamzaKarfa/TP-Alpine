@@ -3,7 +3,7 @@ import { version } from "react";
 const initialState = {
     car:{
         version: {
-            1: {    
+            Pure: {    
                 name: "Pure", 
                 price: 54700, 
                 initialPicture:"./asset/configurateur/modele/selection/pure.png", 
@@ -54,7 +54,7 @@ const initialState = {
                 description: "Cette nouvelle alpine ne serais pas ce qu'elle est si elle garde pas la pureté qui fera de la votre une alpine unique",
                 id: 1 
             },
-            2: {    
+            Legende: {    
                 name: "Legende", 
                 price: 58500, 
                 initialPicture:"./asset/configurateur/modele/selection/legende.png", 
@@ -245,7 +245,7 @@ function rootReducer(state = initialState, action) {
                         ...state.modelisation.car,
                         version:{
                             ...state.modelisation.car.version,
-                            allPictures : state.modelisation.car.version.allPictures[action.payload.color]
+                            allPictures : {...state.car.version[state.modelisation.car.version.name].allPictures[action.payload.color]}
                         },
                     color: action.payload
                     }
@@ -262,7 +262,9 @@ function rootReducer(state = initialState, action) {
                         ...state.modelisation.car,
                         version:{
                             ...state.modelisation.car.version,
-                            allPictures : state.modelisation.car.version.allPictures[action.payload.Wheels.name.toLowerCase()]
+                            allPictures : {
+                                ...state.car.version[state.modelisation.car.version.name].allPictures[state.modelisation.car.color.color][action.payload.Wheels.name.toLowerCase()]
+                            }
                         },
                     color: { ...state.modelisation.car.color},
                     wheels : action.payload.Wheels
@@ -302,7 +304,9 @@ function rootReducer(state = initialState, action) {
                         color: { ...state.modelisation.car.color},
                         wheels : {...state.modelisation.car.wheels},
                         scellerie :  {...state.modelisation.car.scellerie},
-                        equipement : state.modelisation.car.equipement.concat(action.payload)
+                        equipement : {
+                            ...state.modelisation.car.equipement,
+                            [action.payload.name] : action.payload }
                         
                     }
                 }

@@ -25,7 +25,7 @@ const ScellerieSelectConnect=({stateProps,SelectScelleries})=> {
 					/>
 					<div className="card-body">
 						<h4 className="card-title text-capitalize">{stateProps.Scellerie.name} </h4>
-						<Link to="/Equipement">
+						<Link to="/Equipement/design">
 							<button className="btn btn-outline-primary" onClick={SelectScelleries}>selectionner</button>
 						</Link>
 
