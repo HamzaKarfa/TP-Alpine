@@ -36,8 +36,7 @@ const EquipementListConnect = ({EquipementList}) => {
         <Router>
             <div>
                 <nav>
-                    <h3 class="my-4 text-center" >Choisissez vos équipements </h3>
-                    <ul className="nav p-5 mb-3 justify-content-center ">
+                    <ul className="nav justify-content-center ">
                         {Object.keys(EquipementList).map(key1 => (   
                             <li  className="p-2 text-center EquipementNav" >
                                 <Link className="btn btn-primary" to= { '/Equipement/'+key1.toString()}>

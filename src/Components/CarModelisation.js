@@ -26,15 +26,15 @@ const CarModelisationConnect=({state}) => {
     function DisplayItemCaroussel(key,imgSrc){
         if (key === "1") {
             return (
-                <div className="carousel-item active" data-interval="3000">
-                    <img src={imgSrc[key]} className="d-block w-100" />
+                <div className="carousel-item active d-flex" data-interval="3000">
+                    <img src={imgSrc[key]} className="img-fluid imgCaroussel"/>
                 </div>
             )
         } else {
             return (
-            <div className="carousel-item" data-interval="3000">
-                <img src={imgSrc[key]} className="d-block w-100" />
-            </div>
+                <div className="carousel-item d-flex" data-interval="3000">
+                    <img src={imgSrc[key]} className="img-fluid imgCaroussel" />
+                </div>
             )
         }
     }

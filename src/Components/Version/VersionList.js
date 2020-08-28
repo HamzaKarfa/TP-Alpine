@@ -19,7 +19,6 @@ const VersionListConnect = ({VersionsList}) => {
         
             return (
             <>
-                <h3 class="my-4 text-center" >Choisissez votre Version </h3>
                 <div className="row versionSelect text-center mb-5">
 
                     {Object.keys(VersionsList).map(key => (

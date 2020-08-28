@@ -26,7 +26,7 @@ const VersionSelectConnect=({stateProps,SelectVersions})=> {
 					<div className="card-body">
 						<h4 className="card-title text-capitalize">{stateProps.Version.name} </h4>
 						<p className="card-text">
-                            {stateProps.Version.description}
+                            {stateProps.Version.price}
 						</p>
 						<Link to="/Couleur">
 							<button className="btn btn-outline-primary" onClick={SelectVersions}>selectionner</button>

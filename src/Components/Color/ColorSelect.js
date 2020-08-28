@@ -24,7 +24,7 @@ const ColorSelectConnect=({stateProps,SelectColors})=> {
 					<div className="card-body">
 						<h4 className="card-title text-capitalize">{stateProps.Color.name} </h4>
 						<p className="card-text">
-                            {stateProps.Color.name}
+                            {stateProps.Color.price}
 						</p>
 						<Link to="/Jantes">
 							<button className="btn btn-outline-primary" onClick={SelectColors}>selectionner</button>

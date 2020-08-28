@@ -99,21 +99,23 @@ const AppConnect = ({CarElement})=> {
                     <Switch>
 
                         <Route path="/Version">
+                                <h5 class="my-4 text-center" >Choisissez votre Version </h5>
                                 <VersionList />
                         </Route>
                         <Route path="/Couleur">
-                                <h3 class="my-4 text-center" >Choisissez votre couleur </h3>
+                                <h5 class="my-4 text-center" >Choisissez votre couleur </h5>
                                 <ColorList />
                         </Route>
                         <Route path="/Jantes">
-                            <h3 class="my-4 text-center" >Choisissez vos jantes </h3 >
+                            <h5 class="my-4 text-center" >Choisissez vos jantes </h5 >
                             <WheelsList />
                         </Route>
                         <Route path="/Scellerie">
-                                <h3 class="my-4 text-center" >Choisissez votre sellerie </h3 >
+                                <h5 class="my-4 text-center" >Choisissez votre sellerie </h5 >
                                 <ScellerieList />
                         </Route>
                         <Route path="/Equipement">
+                                <h5 class="my-4 text-center" >Choisissez vos Equipements </h5 >
                                 <EquipementList />
                         </Route>
                         <Route path="/Accessory">

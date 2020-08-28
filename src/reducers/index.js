@@ -232,7 +232,14 @@ function rootReducer(state = initialState, action) {
         case 'SELECT_VERSION' :
             newState = { 
                 ...state,
-                modelisation : { car :{version: action.payload} } 
+                modelisation : { 
+                    car :{version: action.payload},
+                    color: [],
+                    wheels : [],
+                    scellerie : [],
+                    equipement : [],
+                    accessoire : []
+                } 
             }
             return newState
 
@@ -247,7 +254,11 @@ function rootReducer(state = initialState, action) {
                             ...state.modelisation.car.version,
                             allPictures : {...state.car.version[state.modelisation.car.version.name].allPictures[action.payload.color]}
                         },
-                    color: action.payload
+                    color: action.payload,
+                    wheels : [],
+                    scellerie : [],
+                    equipement : [],
+                    accessoire : []
                     }
                 }
             }
@@ -267,7 +278,10 @@ function rootReducer(state = initialState, action) {
                             }
                         },
                     color: { ...state.modelisation.car.color},
-                    wheels : action.payload.Wheels
+                    wheels : action.payload.Wheels,
+                    scellerie : [],
+                    equipement : [],
+                    accessoire : []
                     }
                 }
             }
@@ -286,7 +300,8 @@ function rootReducer(state = initialState, action) {
                         color: { ...state.modelisation.car.color},
                         wheels : {...state.modelisation.car.wheels},
                         scellerie : action.payload,
-                        equipement : []
+                        equipement : [],
+                        accessoire : []
                     }
                 }
             }

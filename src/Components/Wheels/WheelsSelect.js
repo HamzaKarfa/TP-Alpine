@@ -37,7 +37,7 @@ const WheelsSelectConnect=({stateProps,state,SelectWheels})=> {
 					<div className="card-body">
 						<h4 className="card-title text-capitalize">{stateProps.Wheels.name} </h4>
 						<p className="card-text">
-							{stateProps.Wheels.description}
+							{stateProps.Wheels.price}
 						</p>
 						<Link to="/Scellerie">
 							<button className="btn btn-outline-primary" onClick={SelectWheels} >selectionner</button>
