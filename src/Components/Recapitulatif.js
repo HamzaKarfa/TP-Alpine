@@ -7,21 +7,27 @@ const stateRecapitulatif = (state) => {
 };
 
 const RecapitulatifConnect = ({Modelisation}) => {
+    let price = null
     function displayRecapEquipement(EquipementList,key) {
+        
         if (key === "equipement") {
             return ( Object.keys(EquipementList).map(key3 => (
                 console.log(key, key3, EquipementList[key3].name),
+                price += EquipementList[key3].price,
                 <li> {key+ ": "+EquipementList[key3].name} </li>
                 )))
         }else if (key === "accessoire") {
             return ( Object.keys(EquipementList).map(key3 => (
+                price += EquipementList[key3].price,
                 console.log(key, key3, EquipementList[key3].name),
                 <li> {key + ": "+EquipementList[key3].name} </li>
             )))
         }else{
             return (
+            
+                price += EquipementList.price,
             <li>
-                {key + ": "+EquipementList.name}
+                {key + ": " + EquipementList.name}
             </li>)
         }
     }
@@ -33,13 +39,16 @@ const RecapitulatifConnect = ({Modelisation}) => {
                 <div className="row versionSelect text-center mb-5">
                 {Object.keys(Modelisation).map(key1 => (
                      console.log("MOULA",Modelisation[key1]),
+                     <div>
                      <ul>
                         {Object.keys(Modelisation[key1]).map(key2 => (
 
                             console.log(key2, Modelisation[key1][key2].name),
                             displayRecapEquipement(Modelisation[key1][key2],key2)
                             ))}
-                    </ul>
+                    </ul>,
+                    <h3>Prix total : {price}</h3>
+                    </div>
                  ))}
                 </div>
             </section>

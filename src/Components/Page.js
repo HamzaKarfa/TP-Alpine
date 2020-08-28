@@ -47,6 +47,11 @@ const AppConnect = ({CarElement})=> {
             }
         }
     }
+    function deleteCaroussel() {
+        if (document.querySelector('.Caroussel')) {
+            document.querySelector('.Caroussel').innerHTML = ""
+        }
+    }
     return (
         <>
             <Router>
@@ -120,6 +125,7 @@ const AppConnect = ({CarElement})=> {
                                 <AccessoryList />
                         </Route>
                         <Route path="/Recapitulatif">
+                            {deleteCaroussel()}
                             <Recapitulatif/>
                         </Route>
                         <Route path="/">
